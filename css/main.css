@@ -317,7 +317,7 @@ header.header-post .post-heading .post-subheading {
 
 @media only screen and (min-width: 768px) {
   header.header-post .post-heading h1 {
-    font-size: 50px;
+    font-size: 47px;
   }
 }
 
@@ -326,6 +326,15 @@ header.header-post .post-heading .post-subheading {
     font-size: 47px;
     font-weight: 700;
   }
+}
+
+.post-article {
+  font-size: 29px;
+  line-height: 27px;
+  display: block;
+  font-family: 'Droid Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  margin: 0 auto;
 }
 
 .caption {
@@ -345,7 +354,7 @@ header.header-post .post-heading .post-subheading {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-size: 14px;
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: 1px;
   padding: 10px 5px;
   background: white;
