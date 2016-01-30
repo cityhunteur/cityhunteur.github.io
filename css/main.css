@@ -3,11 +3,11 @@
 /* --- General --- */
 
 body {
-  font-family: 'Open Sans', 'Times New Roman', serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-size: 18px;
   color: rgba(0,0,0,0.8);
   position: relative;
-  background: #fff;
+  background: white;
 }
 p {
   line-height: 1.5;
@@ -15,18 +15,18 @@ p {
 }
 p a {
   /* text-decoration: underline */
-  color: #008AFF;
+  color: #2BDE73;
 }
 h1,h2,h3,h4,h5,h6 {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 700;
 }
 a {
-  color: #00ab6b;
+  color: #2BDE73;
 }
 a:hover,
 a:focus {
-  color: #0085a1;
+  color: #2BDE73;
 }
 blockquote {
   color: #fafafa;
@@ -59,14 +59,14 @@ hr.small {
 }
 
 ::-moz-selection {
-  color: white;
+  color: rgba(0, 0, 0, 0.8);
   text-shadow: none;
-  background: #0085a1;
+  background: #82FF85;
 }
 ::selection {
-  color: white;
+  color: rgba(0, 0, 0, 0.8);
   text-shadow: none;
-  background: #0085a1;
+  background: #82FF85;
 }
 img::selection {
   color: white;
@@ -95,7 +95,7 @@ img {
 
 .navbar-custom {
   background: #fafafa;
-  border-bottom: 1px solid #f0f0f0;
+  border-bottom: 1px solid rgba(0,0,0,0.3);
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
@@ -108,14 +108,14 @@ img {
 .navbar-custom .navbar-brand,
 .navbar-custom .nav li a {
   font-weight: 700;
-  color: #404040;
+  color: rgba(0,0,0,0.8);
 }
 
 .navbar-custom .navbar-brand:hover,
 .navbar-custom .navbar-brand:focus ,
 .navbar-custom .nav li a:hover,
 .navbar-custom .nav li a:focus {
-  color: #0085a1;
+  color: #2BDE73;
 }
 
 @media only screen and (min-width: 768px) {
@@ -187,13 +187,13 @@ img {
 footer {
   padding: 30px 0;
   background: #fafafa;
-  border-top: 1px #f0f0f0 solid;
+  border-top: 1px rgba(0, 0, 0, 0.3); solid;
   margin-top: 50px;
   font-size: 14px;
 }
 
 footer a {
-  color: #404040;
+  color: rgba(0,0,0,0.8);
 }
 
 footer .list-inline {
@@ -201,7 +201,7 @@ footer .list-inline {
   padding: 0;
 }
 footer .copyright {
-  font-family: Open Sans;
+  font-family: "Open Sans";
   text-align: center;
   margin-bottom: 0;
 }
@@ -226,7 +226,7 @@ footer .theme-by {
 
 .post-preview {
   padding: 20px 0;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid rgba(0,0,0,0.3);
 }
 
 @media only screen and (min-width: 768px) {
@@ -241,17 +241,17 @@ footer .theme-by {
 
 .post-preview a {
   text-decoration: none;
-  color: #404040;
+  color: rgba(0,0,0,0.8);
 }
 
 .post-preview a:focus,
 .post-preview a:hover {
   text-decoration: none;
-  color: #0085a1;
+  color: #2BDE73;
 }
 
 .post-preview .post-title {
-  font-size: 30px;
+  font-size: 29px;
   margin-top: 0;
 }
 .post-preview .post-subtitle {
@@ -261,28 +261,29 @@ footer .theme-by {
 }
 .post-preview .post-meta,
 .post-heading .post-meta {
-  color: #808080;
-  font-size: 18px;
-  font-style: italic;
-  margin: 0 0 10px;
+  color: rgba(0,0,0,0.8);
+  font-size: 14px;
+  font-style: normal;
+  margin: 0 0 14px;
 }
 .post-preview .post-entry {
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Droid Sans', 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 .post-preview .post-read-more {
-  font-weight: 800;
+  font-weight: 700;
 }
 
 @media only screen and (min-width: 768px) {
   .post-preview .post-title {
-    font-size: 36px;
+    font-size: 29px;
   }
 }
 
 /* --- Post and page layout --- */
 
 header.header-page {
-  margin-bottom: 20px;
+  margin-bottom: 29px;
+  margin-top: 29px;
 }
 
 header.header-page .page-heading {
@@ -290,27 +291,27 @@ header.header-page .page-heading {
 }
 
 header.header-post .post-heading h1 {
-  font-size: 35px;
+  font-size: 29px;
   margin-top: 0;
 }
 
 header.header-page .page-heading h1 {
-  font-size: 50px;
+  font-size: 29px;
   margin-top: 0;
 }
 
 header.header-post .post-heading .post-subheading,
 header.header-page .page-heading .page-subheading {
-  font-size: 24px;
+  font-size: 29px;
   line-height: 1.1;
   display: block;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 300;
-  margin: 10px 0 0;
+  font-weight: 400;
+  margin-bottom: : 27px;
 }
 
 header.header-post .post-heading .post-subheading {
-  margin-bottom: 20px;
+  margin-bottom: 27px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -321,7 +322,8 @@ header.header-post .post-heading .post-subheading {
 
 @media only screen and (min-width: 768px) {
   header.header-page .page-heading h1 {
-    font-size: 80px;
+    font-size: 47px;
+    font-weight: 700;
   }
 }
 
@@ -345,9 +347,9 @@ header.header-post .post-heading .post-subheading {
   font-weight: 800;
   letter-spacing: 1px;
   padding: 10px 5px;
-  background: #FFF;
+  background: white;
   border-radius: 0;
-  color: #404040;
+  color: #rgba(0,0,0,0.3);
 }
 @media only screen and (min-width: 768px) {
   .pager li a {
@@ -356,9 +358,9 @@ header.header-post .post-heading .post-subheading {
 }
 .pager li a:hover,
 .pager li a:focus {
-  color: #FFF;
-  background: #0085a1;
-  border: 1px solid #0085a1;
+  color: #2BDE73;
+  background: white;
+  border: 1px solid #rgba(0,0,0,0.3);
 }
 
 .pager {
@@ -381,23 +383,23 @@ header.header-post .post-heading .post-subheading {
   padding: 0;
 }
 .blog-post table tr {
-  border-top: 1px solid #cccccc;
-  background-color: #ffffff;
+  border-top: 1px solid rgba(0,0,0,0.3);
+  background-color: white;
   margin: 0;
   padding: 0;
 }
 .blog-post table tr:nth-child(2n) {
-  background-color: #f8f8f8;
+  background-color: white;
 }
 .blog-post table tr th {
   font-weight: bold;
-  border: 1px solid #cccccc;
+  border: 1px solid rgba(0,0,0,0.3);
   text-align: left;
   margin: 0;
   padding: 6px 13px;
 }
 .blog-post table tr td {
-  border: 1px solid #cccccc;
+  border: 1px solid rgba(0,0,0,0.3);
   text-align: left;
   margin: 0;
   padding: 6px 13px;
