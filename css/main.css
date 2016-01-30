@@ -256,7 +256,8 @@ footer .theme-by {
 }
 .post-preview .post-subtitle {
   margin: 0;
-  font-weight: 300;
+  font-size: 18px;
+  font-weight: 700;
   margin-bottom: 10px;
 }
 .post-preview .post-meta,
@@ -349,7 +350,7 @@ header.header-post .post-heading .post-subheading {
   padding: 10px 5px;
   background: white;
   border-radius: 0;
-  color: #rgba(0,0,0,0.3);
+  color: rgba(0,0,0,0.3);
 }
 @media only screen and (min-width: 768px) {
   .pager li a {
