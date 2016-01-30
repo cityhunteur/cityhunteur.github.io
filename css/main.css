@@ -329,10 +329,10 @@ header.header-post .post-heading .post-subheading {
 }
 
 .post-article {
-  font-size: 29px;
+  font-size: 18px;
   line-height: 27px;
   display: block;
-  font-family: 'Droid Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Droid Sans', 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 400;
   margin: 0 auto;
 }
