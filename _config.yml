@@ -70,9 +70,9 @@ google_analytics: "UA-72819925-1"
 # Output options (more information on Jekyll's site)
 timezone: "Europe/London"
 markdown: kramdown
-highlighter: pygments
 permalink: /:year-:month-:day-:title
 paginate: 5
+highlighter: rouge
 
 # Default YAML values (more information on Jekyll's site)
 defaults:
@@ -106,6 +106,7 @@ prose:
     - LICENSE
     - feed.xml
     - _config.yml
+    - _config_dev.yml
     - /_layouts
     - /_includes
     - /css
@@ -144,4 +145,4 @@ prose:
 
 # Beautiful Jekyll / Dean Attali
 # 2fc73a3a967e97599c9763d05e564189
-gems: [jekyll-paginate]
+gems: [jekyll-paginate, rouge]
