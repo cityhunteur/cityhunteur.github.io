@@ -22,8 +22,12 @@ subtitle: Technologist and Developer
     </p>
 
     <div class="post-entry">
-      {{ post.content | truncatewords: 50 | strip_html | xml_escape}}
-	  <a href="{{ post.url | prepend: site.baseurl }}" class="post-read-more">Read&nbsp;More</a>
+      <p>
+        {{ post.content | truncatewords: 50 | strip_html | xml_escape}}
+      </p>
+      <p>
+        <a href="{{ post.url | prepend: site.baseurl }}" class="post-read-more">Read&nbsp;More</a>        
+      </p>
     </div>
 
    </article>

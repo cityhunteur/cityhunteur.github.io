@@ -7,7 +7,9 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="{{ site.url }}">{{ site.title }}</a>
+      <a class="logo-img-border" href="{{ site.url }}">
+        <img class="logo-img" src="{{ site.logo | prepend: site.baseurl | replace: '//', '/' }}" />
+      </a>
     </div>
 
     <div class="collapse navbar-collapse" id="main-navbar">
@@ -22,7 +24,7 @@
               {% assign internal = false %}
             {% endif %}
           {% endif %}
-        	
+
         {% if internal %}
           {% capture linkurl %}{{ site.baseurl }}/{{ link[1] }}{% endcapture %}
         {% else %}
@@ -34,7 +36,7 @@
 	    {% endfor %}
       </ul>
     </div>
-	
+
 	{% if site.avatar %}
 	<div class="avatar-container">
 	  <div class="avatar-img-border">
@@ -44,6 +46,6 @@
 	  </div>
 	</div>
 	{% endif %}
-	
+
   </div>
-</nav>  
+</nav>

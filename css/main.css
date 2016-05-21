@@ -15,8 +15,12 @@ p a {
   /* text-decoration: underline */
   color: #2BDE73;
 }
-h1,h2,h3,h4,h5,h6 {
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+h1 {
+  font-family: 'Playfair Display', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+}
+h2,h3,h4,h5,h6 {
+  font-family: 'Alegreya', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 700;
 }
 a {
@@ -48,7 +52,7 @@ hr.small {
 }
 
 .main-explain-area {
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Alegreya', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   padding: 15px inherit;
 }
 
@@ -92,9 +96,8 @@ img {
 /* --- Navbar --- */
 
 .navbar-custom {
-  background: #fafafa;
-  border-bottom: 1px solid rgba(0,0,0,0.3);
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background: white;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
 }
 
 .navbar-custom .nav li a {
@@ -107,13 +110,6 @@ img {
 .navbar-custom .nav li a {
   font-weight: 700;
   color: rgba(0,0,0,0.8);
-}
-
-.navbar-custom .navbar-brand:hover,
-.navbar-custom .navbar-brand:focus ,
-.navbar-custom .nav li a:hover,
-.navbar-custom .nav li a:focus {
-  color: #2BDE73;
 }
 
 @media only screen and (min-width: 768px) {
@@ -153,6 +149,16 @@ img {
   border-radius: 50%;
   display: block;
 }
+.navbar-custom .navbar-header .logo-img-border {
+  width: 100%;
+  display: inline-block;
+}
+
+.navbar-custom .navbar-header .logo-img {
+  width: 100%;
+  display: block;
+  margin: 50% 0;
+}
 
 .navbar-custom.top-nav-short .avatar-container{
   opacity: 0;
@@ -178,6 +184,17 @@ img {
   .navbar-custom .avatar-container  .avatar-img {
     width: 100%;
   }
+
+  .navbar-custom .navbar-header .logo-img-border {
+    width: 100%;
+    display: inline-block;
+  }
+
+  .navbar-custom .navbar-header .logo-img {
+    width: 100%;
+    display: block;
+  }
+
 }
 
 /* --- Footer --- */
@@ -186,7 +203,6 @@ footer {
   padding: 30px 0;
   background: #fafafa;
   border-top: 1px rgba(0, 0, 0, 0.3); solid;
-  margin-top: 50px;
   font-size: 14px;
 }
 
@@ -199,7 +215,6 @@ footer .list-inline {
   padding: 0;
 }
 footer .copyright {
-  font-family: "Open Sans";
   text-align: center;
   margin-bottom: 0;
 }
@@ -223,13 +238,15 @@ footer .theme-by {
 /* --- Post preview --- */
 
 .post-preview {
-  padding: 20px 0;
-  border-bottom: 1px solid rgba(0,0,0,0.3);
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  margin-bottom: 10%;
+  padding-bottom: 10%;
+  position: relative;
 }
 
 @media only screen and (min-width: 768px) {
   .post-preview {
-    padding: 35px 0;
+    padding: 10% %;
   }
 }
 
@@ -245,18 +262,17 @@ footer .theme-by {
 .post-preview a:focus,
 .post-preview a:hover {
   text-decoration: none;
-  color: #2BDE73;
 }
 
 .post-preview .post-title {
   font-size: 29px;
-  margin-top: 0;
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
 }
 .post-preview .post-subtitle {
   margin: 0;
   font-size: 18px;
   font-weight: 700;
-  margin-bottom: 10px;
 }
 .post-preview .post-meta,
 .post-heading .post-meta {
@@ -266,11 +282,34 @@ footer .theme-by {
   margin: 0 0 14px;
 }
 .post-preview .post-entry {
-  font-family: 'Droid Serif', 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'Source Sans Pro', 'Alegreya', 'Helvetica Neue', sans-serif;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
 }
 .post-preview .post-read-more {
-  font-weight: 700;
+  background-color: rgba(0,0,0,0.8);
+  border: none;
+  box-shadow: none;
+  color: #fff;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: normal;
+  letter-spacing: 2px;
+  margin-top: 20px;
+  padding: 12px 24px;
+  text-transform: uppercase;
+  /*font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;*/
 }
+.post-preview .p {
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+
 
 @media only screen and (min-width: 768px) {
   .post-preview .post-title {
@@ -287,6 +326,7 @@ header.header-page {
 
 header.header-page .page-heading {
   text-align: center;
+  margin-bottom: 5%;
 }
 
 header.header-post .post-heading h1 {
@@ -299,14 +339,23 @@ header.header-page .page-heading h1 {
   margin-top: 0;
 }
 
-header.header-post .post-heading .post-subheading,
-header.header-page .page-heading .page-subheading {
+header.header-post .post-heading .post-subheading {
   font-size: 29px;
   line-height: 1.1;
   display: block;
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Alegreya', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 400;
-  margin-bottom: : 27px;
+  margin-bottom: 27px;
+}
+
+header.header-page .page-heading .page-subheading {
+  font-size: 18px;
+  line-height: 1.1;
+  display: block;
+  font-family: 'Playfair Display', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  margin-top: 27px;
+  margin-bottom: 27px;
 }
 
 header.header-post .post-heading .post-subheading {
@@ -330,7 +379,7 @@ header.header-post .post-heading .post-subheading {
   font-size: 18px;
   line-height: 27px;
   display: block;
-  font-family: 'Droid Serif', 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Source Sans Pro', 'Alegreya', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 400;
   margin: 0 auto;
 }
@@ -349,7 +398,7 @@ header.header-post .post-heading .post-subheading {
 /* --- Pager --- */
 
 .pager li a {
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Alegreya', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-size: 14px;
   font-weight: 700;
