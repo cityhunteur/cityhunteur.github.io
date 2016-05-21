@@ -300,7 +300,6 @@ footer .theme-by {
   margin-top: 20px;
   padding: 12px 24px;
   text-transform: uppercase;
-  /*font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;*/
 }
 .post-preview .p {
     display: block;
@@ -398,26 +397,29 @@ header.header-post .post-heading .post-subheading {
 /* --- Pager --- */
 
 .pager li a {
-  font-family: 'Alegreya', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-color: rgba(0,0,0,0.8);
+  border: none;
+  box-shadow: none;
+  color: #fff;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: normal;
+  letter-spacing: 2px;
+  margin-top: 20px;
+  padding: 12px 24px;
   text-transform: uppercase;
-  font-size: 14px;
-  font-weight: 700;
-  letter-spacing: 1px;
-  padding: 10px 5px;
-  background: white;
   border-radius: 0;
-  color: rgba(0,0,0,0.3);
 }
+.pager li > a:hover,
+.pager li > a:focus {
+    text-decoration: none;
+    background-color: rgba(0,0,0,0.8);
+}
+
 @media only screen and (min-width: 768px) {
   .pager li a {
     padding: 15px 25px;
   }
-}
-.pager li a:hover,
-.pager li a:focus {
-  color: #2BDE73;
-  background: white;
-  border: 1px solid #rgba(0,0,0,0.3);
 }
 
 .pager {
