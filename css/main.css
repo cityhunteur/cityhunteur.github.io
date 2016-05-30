@@ -24,11 +24,11 @@ h2,h3,h4,h5,h6 {
   font-weight: 700;
 }
 a {
-  color: #2BDE73;
+  color: #6F00FF;
 }
 a:hover,
 a:focus {
-  color: #2BDE73;
+  color: #6F00FF;
 }
 blockquote {
   color: #fafafa;
@@ -110,6 +110,11 @@ img {
 .navbar-custom .nav li a {
   font-weight: 700;
   color: rgba(0,0,0,0.8);
+}
+
+.navbar-custom .nav li a:hover,
+.navbar-custom .nav li a:focus {
+    color: #6F00FF;
 }
 
 @media only screen and (min-width: 768px) {
@@ -311,6 +316,10 @@ footer .theme-by {
     -webkit-margin-start: 0px;
     -webkit-margin-end: 0px;
 }
+.post-read-more:hover,
+.post-read-more:focus {
+  background-color: #6F00FF;
+}
 
 
 @media only screen and (min-width: 768px) {
@@ -416,7 +425,7 @@ header.header-post .post-heading .post-subheading {
 .pager li > a:hover,
 .pager li > a:focus {
     text-decoration: none;
-    background-color: rgba(0,0,0,0.8);
+    background-color: #6F00FF;
 }
 
 @media only screen and (min-width: 768px) {
