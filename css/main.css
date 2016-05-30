@@ -13,7 +13,7 @@ p {
 }
 p a {
   /* text-decoration: underline */
-  color: #2BDE73;
+  color: ##6F00FF;
 }
 h1 {
   font-family: 'Playfair Display', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -61,14 +61,14 @@ hr.small {
 }
 
 ::-moz-selection {
-  color: rgba(0, 0, 0, 0.8);
+  color: white;
   text-shadow: none;
-  background: #82FF85;
+  background: #6F00FF;
 }
 ::selection {
-  color: rgba(0, 0, 0, 0.8);
-  text-shadow: none;
-  background: #82FF85;
+  color: white
+;  text-shadow: none;
+  background: #6F00FF;
 }
 img::selection {
   color: white;
@@ -215,7 +215,7 @@ footer {
 }
 
 footer a {
-  color: rgba(0,0,0,0.8);
+  color: #6F00FF;
 }
 
 footer .list-inline {
@@ -229,6 +229,9 @@ footer .copyright {
 footer .theme-by {
   text-align: center;
   margin: 10px 0 0;
+}
+footer .theme-by a {
+  color: rgb(119, 119, 119);
 }
 
 @media only screen and (min-width: 768px) {
@@ -297,7 +300,7 @@ footer .theme-by {
   vertical-align: baseline;
 }
 .post-preview .post-read-more {
-  background-color: rgba(0,0,0,0.8);
+  background-color: #6F00FF;
   border: none;
   box-shadow: none;
   color: #fff;
@@ -409,7 +412,7 @@ header.header-post .post-heading .post-subheading {
 /* --- Pager --- */
 
 .pager li a {
-  background-color: rgba(0,0,0,0.8);
+  background-color: #6F00FF;
   border: none;
   box-shadow: none;
   color: #fff;

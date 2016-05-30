@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Technology stacks and tools I use
+title: Technology stacks I used
 subtitle: Iteration 2
 ---
 
@@ -19,7 +19,7 @@ As you can imagine, this stack is rather old and hard to maintain. Luckily, a lo
 
 That was my first exposure to a more modern UI stack and it was a breath of fresh air. The development workflow and tooling are a lot nicer to use. Although I used node during development, the UI still talks to the Java monolith via a REST API.
 
-I used grunt, gulp, bower, karma and jasmine. And also used Express and Scalatra for stubbing purposes. Once, you get your head around those tools, the whole stack seems to come together quite well. It also allowed clear separation of the UI and backend development. Which if managed well, can be quite useful.
+I used Grunt, Gulp, Bower, Karma and Jasmine. And also used Express and Scalatra for stubbing purposes. Once, you get your head around those tools, the whole stack seems to come together quite well. It also allowed clear separation of the UI and backend development. Which if managed well, can be quite useful.
 
 ## Scala / Akka / Scalatra
 
