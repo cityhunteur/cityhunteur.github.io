@@ -327,7 +327,9 @@ footer .theme-by a {
 
 @media only screen and (min-width: 768px) {
   .post-preview .post-title {
-    font-size: 29px;
+    font-size: 31px;
+    line-height: 1.12;
+    font-weight: 700;
   }
 }
 
@@ -378,14 +380,16 @@ header.header-post .post-heading .post-subheading {
 
 @media only screen and (min-width: 768px) {
   header.header-post .post-heading h1 {
-    font-size: 47px;
+   font-size: 36px;
+   line-height: 1.15;    
+   font-weight: 700;
   }
 }
 
 @media only screen and (min-width: 768px) {
   header.header-page .page-heading h1 {
-    font-size: 47px;
-    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.15;
   }
 }
 
@@ -407,6 +411,20 @@ header.header-post .post-heading .post-subheading {
   display: block;
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
+}
+
+@media only screen and (min-width: 768px) {
+  .post-article {
+    font-size: 21px;
+    line-height: 1.58;
+    font-weight: 400;
+  }
+  h2 {
+    font-size: 28px;
+    line-height: 1.22;
+    font-weight: 700;
+    font-family: 'Alegreya', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  }
 }
 
 /* --- Pager --- */
