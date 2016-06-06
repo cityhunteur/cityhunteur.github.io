@@ -1,7 +1,19 @@
+/* --- Typography --- */
+@font-face { 
+font-family: Moon;
+src: url(../assets/fonts/Moon_Bold.otf); 
+src: url(../assets/fonts/Moon_Light.otf); 
+}
+@font-face { 
+font-family: AktivGrotesk;
+src: url(../assets/fonts/AktivGrotesk_Trial_Bd.ttf); 
+src: url(../assets/fonts/AktivGrotesk_Trial_Lt.ttf); 
+}
+
 /* --- General --- */
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Source Sans Pro", "Helvetica Neue", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "AktivGrotesk", "Helvetica Neue", sans-serif;
   font-size: 18px;
   color: rgba(0,0,0,0.8);
   position: relative;
@@ -22,12 +34,12 @@ p a {
   color: ##6F00FF;
 }
 h1 {
-  font-family: 'Merriweather', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 700;
+  font-family: 'Moon', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: bold;
 }
 h2,h3,h4,h5,h6 {
-  font-family: 'Merriweather', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 700;
+  font-family: 'Moon', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: bold;
 }
 a {
   color: #6F00FF;
@@ -58,7 +70,7 @@ hr.small {
 }
 
 .main-explain-area {
-  font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'AktivGrotesk', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   padding: 15px inherit;
 }
 
@@ -290,7 +302,7 @@ footer .theme-by a {
   margin: 0;
   font-size: 18px;
   font-weight: 400;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Source Sans Pro", "Helvetica Neue", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "AktivGrotesk", "Helvetica Neue", sans-serif;
 }
 .post-preview .post-meta,
 .post-heading .post-meta {
@@ -300,7 +312,7 @@ footer .theme-by a {
   margin: 0 0 14px;
 }
 .post-preview .post-entry {
-  font-family: 'Source Sans Pro', 'Source Sans Pro', 'Helvetica Neue', sans-serif;
+  font-family: 'AktivGrotesk', 'AktivGrotesk', 'Helvetica Neue', sans-serif;
   border: 0;
   margin: 0;
   padding: 0;
@@ -318,7 +330,7 @@ footer .theme-by a {
   margin-top: 20px;
   padding: 12px 24px;
   text-transform: uppercase;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Source Sans Pro", "Helvetica Neue", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "AktivGrotesk", "Helvetica Neue", sans-serif;
 }
 .post-preview .p {
     display: block;
@@ -367,7 +379,7 @@ header.header-post .post-heading .post-subheading {
   font-size: 18px;
   line-height: 1.1;
   display: block;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Source Sans Pro", "Helvetica Neue", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "AktivGrotesk", "Helvetica Neue", sans-serif;
   font-weight: 500;
   margin-bottom: 27px;
 }
@@ -376,7 +388,7 @@ header.header-page .page-heading .page-subheading {
   font-size: 18px;
   line-height: 1.1;
   display: block;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Source Sans Pro", "Helvetica Neue", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "AktivGrotesk", "Helvetica Neue", sans-serif;
   font-weight: 500;
   margin-top: 27px;
   margin-bottom: 27px;
@@ -401,7 +413,7 @@ header.header-page .page-heading .page-subheading {
   font-size: 18px;
   line-height: 27px;
   display: block;
-  font-family: 'Source Sans Pro', 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'AktivGrotesk', 'AktivGrotesk', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 400;
   margin: 0 auto;
 }
@@ -427,7 +439,7 @@ header.header-page .page-heading .page-subheading {
     font-size: 28px;
     line-height: 1.22;
     font-weight: 700;
-    font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'AktivGrotesk', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   }
 }
 
