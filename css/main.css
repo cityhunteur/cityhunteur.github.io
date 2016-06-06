@@ -1,11 +1,17 @@
 /* --- General --- */
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Source Sans Pro", "Helvetica Neue", sans-serif;
   font-size: 18px;
   color: rgba(0,0,0,0.8);
   position: relative;
   background: white;
+}
+@media only screen and (min-width: 768px) {
+  body {
+      font-size: 21px;
+      line-height: 1.58; 
+  }
 }
 p {
   line-height: 1.5;
@@ -16,11 +22,11 @@ p a {
   color: ##6F00FF;
 }
 h1 {
-  font-family: 'Playfair Display', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Merriweather', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 700;
 }
 h2,h3,h4,h5,h6 {
-  font-family: 'Alegreya', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Merriweather', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 700;
 }
 a {
@@ -52,7 +58,7 @@ hr.small {
 }
 
 .main-explain-area {
-  font-family: 'Alegreya', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   padding: 15px inherit;
 }
 
@@ -283,7 +289,8 @@ footer .theme-by a {
 .post-preview .post-subtitle {
   margin: 0;
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 400;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Source Sans Pro", "Helvetica Neue", sans-serif;
 }
 .post-preview .post-meta,
 .post-heading .post-meta {
@@ -293,7 +300,7 @@ footer .theme-by a {
   margin: 0 0 14px;
 }
 .post-preview .post-entry {
-  font-family: 'Source Sans Pro', 'Alegreya', 'Helvetica Neue', sans-serif;
+  font-family: 'Source Sans Pro', 'Source Sans Pro', 'Helvetica Neue', sans-serif;
   border: 0;
   margin: 0;
   padding: 0;
@@ -311,6 +318,7 @@ footer .theme-by a {
   margin-top: 20px;
   padding: 12px 24px;
   text-transform: uppercase;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Source Sans Pro", "Helvetica Neue", sans-serif;
 }
 .post-preview .p {
     display: block;
@@ -356,11 +364,11 @@ header.header-page .page-heading h1 {
 }
 
 header.header-post .post-heading .post-subheading {
-  font-size: 29px;
+  font-size: 18px;
   line-height: 1.1;
   display: block;
-  font-family: 'Alegreya', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 400;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Source Sans Pro", "Helvetica Neue", sans-serif;
+  font-weight: 500;
   margin-bottom: 27px;
 }
 
@@ -368,13 +376,9 @@ header.header-page .page-heading .page-subheading {
   font-size: 18px;
   line-height: 1.1;
   display: block;
-  font-family: 'Playfair Display', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 400;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Source Sans Pro", "Helvetica Neue", sans-serif;
+  font-weight: 500;
   margin-top: 27px;
-  margin-bottom: 27px;
-}
-
-header.header-post .post-heading .post-subheading {
   margin-bottom: 27px;
 }
 
@@ -397,7 +401,7 @@ header.header-post .post-heading .post-subheading {
   font-size: 18px;
   line-height: 27px;
   display: block;
-  font-family: 'Source Sans Pro', 'Alegreya', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Source Sans Pro', 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 400;
   margin: 0 auto;
 }
@@ -423,7 +427,7 @@ header.header-post .post-heading .post-subheading {
     font-size: 28px;
     line-height: 1.22;
     font-weight: 700;
-    font-family: 'Alegreya', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   }
 }
 
@@ -503,4 +507,54 @@ header.header-post .post-heading .post-subheading {
 .blog-post table tr th :last-child,
 .blog-post table tr td :last-child {
   margin-bottom: 0;
+}
+
+/* --- Galleries --- */
+.gallery {
+    padding-bottom: 0px;
+    padding-top: 40px;
+    display: block;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+.gallery container {
+  display: table;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.container div {
+  display: block;
+}
+.books {
+    max-height: 349px;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 50px;
+    border-radius: 3px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 9px 20px 0 rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    transition: box-shadow 0.3s linear;
+}
+.books img {
+    max-height: 302px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    width: inherit;
+    height: inherit;
+    max-height: 350px;
+    transform-origin: 0 50%;
+    transform: rotateY(0);
+    transition: all 0.45s ease;
+}
+@media only screen and (min-width: 768px) {
+  .gallery container  {
+    width: 750px;
+  }
+  .col-sm-6 {
+    width: 50%
+  }
 }
