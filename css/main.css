@@ -1,13 +1,13 @@
 /* --- Typography --- */
 @font-face { 
 font-family: Moon;
-src: url(../assets/fonts/Moon_Bold.otf); 
-src: url(../assets/fonts/Moon_Light.otf); 
+src: url(/assets/fonts/Moon_Bold.otf); 
+src: url(/assets/fonts/Moon_Light.otf); 
 }
 @font-face { 
 font-family: AktivGrotesk;
-src: url(../assets/fonts/AktivGrotesk_Trial_Bd.ttf); 
-src: url(../assets/fonts/AktivGrotesk_Trial_Lt.ttf); 
+src: url(/assets/fonts/AktivGrotesk_Trial_Bd.ttf); 
+src: url(/assets/fonts/AktivGrotesk_Trial_Lt.ttf); 
 }
 
 /* --- General --- */
