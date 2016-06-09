@@ -32,6 +32,76 @@ Inspired by the legendary reading lists by Bill Gates and others, here is a list
 						<a href="https://www.amazon.co.uk/Lean-Startup-Innovation-Successful-Businesses/dp/0670921602" target="_blank"><img alt="The Lean Startup" src="/img/books/The-Lean-Startup.jpg"></a>
 				</li>		
 				</div>
+
+				<div class="col-md-3 col-sm-6">
+				<li class="books">
+						<a href="" target="_blank"><img alt="Design patterns : elements of reusable object-oriented software" src="/img/books/Design-patterns-elements-of-reusable-object-oriented-software.jpg"></a>
+				</li>		
+				</div>
+
+				<div class="col-md-3 col-sm-6">
+				<li class="books">
+						<a href="" target="_blank"><img alt="Continuous Delivery" src="/img/books/Continuous-Delivery.jpg"></a>
+				</li>		
+				</div>
+
+				<div class="col-md-3 col-sm-6">
+				<li class="books">
+						<a href="" target="_blank"><img alt="Enterprise Integration Patterns" src="/img/books/Enterprise-Integration-Patterns.jpg"></a>
+				</li>		
+				</div>
+
+				<div class="col-md-3 col-sm-6">
+				<li class="books">
+						<a href="" target="_blank"><img alt="Age of Cryptocurrency" src="/img/books/Age-of-Cryptocurrency.jpg"></a>
+				</li>		
+				</div>
+
+				<div class="col-md-3 col-sm-6">
+				<li class="books">
+						<a href="" target="_blank"><img alt="Where Good Ideas Come From" src="/img/books/Where-Good-Ideas-Come-From.jpg"></a>
+				</li>		
+				</div>
+
+				<div class="col-md-3 col-sm-6">
+				<li class="books">
+						<a href="" target="_blank"><img alt="Outliers" src="/img/books/Outliers.jpg"></a>
+				</li>		
+				</div>
+
+
+				<div class="col-md-3 col-sm-6">
+				<li class="books">
+						<a href="" target="_blank"><img alt="The Mythical Man-month" src="/img/books/The-Mythical-Man-month.jpg"></a>
+				</li>		
+				</div>	
+
+				<div class="col-md-3 col-sm-6">
+				<li class="books">
+						<a href="" target="_blank"><img alt="Code" src="/img/books/Code.jpg"></a>
+				</li>		
+				</div>
+
+
+				<div class="col-md-3 col-sm-6">
+				<li class="books">
+						<a href="" target="_blank"><img alt="Age of Cryptocurrency" src="/img/books/Age-of-Cryptocurrency.jpg"></a>
+				</li>		
+				</div>
+
+
+				<div class="col-md-3 col-sm-6">
+				<li class="books">
+						<a href="" target="_blank"><img alt="Hello, Startup" src="/img/books/Hello-Startup.jpg"></a>
+				</li>		
+				</div>
+
+
+				<div class="col-md-3 col-sm-6">
+				<li class="books">
+						<a href="" target="_blank"><img alt="Zero To One" src="/img/books/Zero-To-One.jpeg"></a>
+				</li>		
+				</div>
 			</div>
 		</div>
 		</div>
