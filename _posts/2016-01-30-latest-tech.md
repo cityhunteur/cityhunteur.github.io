@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Technology stacks I used
-subtitle: Iteration 2
+title: Technology stacks
+subtitle: Stacks I use at work and experiment with on personal projects
 ---
 
 

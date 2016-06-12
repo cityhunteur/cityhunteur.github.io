@@ -1,7 +1,7 @@
 ---
 layout: post
 title: My reading list
-subtitle: MVP
+subtitle: Books I read recently that I will recommend
 ---
 <!-- <div>
 <img class="" src="/img//books/books.png">
