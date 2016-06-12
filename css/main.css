@@ -57,7 +57,7 @@ p {
 }
 p a {
   /* text-decoration: underline */
-  color: ##3A4353;
+  color: ##89ABE3;
 }
 h1 {
   font-family: 'Stellar', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -69,11 +69,11 @@ h2,h3,h4,h5,h6 {
   font-weight: medium;
 }
 a {
-  color: #3A4353;
+  color: #89ABE3;
 }
 a:hover,
 a:focus {
-  color: #3A4353;
+  color: #89ABE3;
 }
 blockquote {
   color: #fafafa;
@@ -108,12 +108,12 @@ hr.small {
 ::-moz-selection {
   color: white;
   text-shadow: none;
-  background: #3A4353;
+  background: #89ABE3;
 }
 ::selection {
   color: white
 ;  text-shadow: none;
-  background: #3A4353;
+  background: #89ABE3;
 }
 img::selection {
   color: white;
@@ -159,7 +159,7 @@ img {
 
 .navbar-custom .nav li a:hover,
 .navbar-custom .nav li a:focus {
-    color: #3A4353;
+    color: #89ABE3;
 }
 
 @media only screen and (min-width: 768px) {
@@ -260,7 +260,7 @@ footer {
 }
 
 footer a {
-  color: #3A4353;
+  color: #89ABE3;
 }
 
 footer .list-inline {
@@ -346,7 +346,7 @@ footer .theme-by a {
   vertical-align: baseline;
 }
 .post-preview .post-read-more {
-  background-color: #3A4353;
+  background-color: #89ABE3;
   border: none;
   box-shadow: none;
   color: #fff;
@@ -368,7 +368,7 @@ footer .theme-by a {
 }
 .post-read-more:hover,
 .post-read-more:focus {
-  background-color: #3A4353;
+  background-color: #89ABE3;
 }
 
 
@@ -479,7 +479,7 @@ header.header-page .page-heading .page-subheading {
 /* --- Pager --- */
 
 .pager li a {
-  background-color: #3A4353;
+  background-color: #89ABE3;
   border: none;
   box-shadow: none;
   color: #fff;
@@ -495,7 +495,7 @@ header.header-page .page-heading .page-subheading {
 .pager li > a:hover,
 .pager li > a:focus {
     text-decoration: none;
-    background-color: #3A4353;
+    background-color: #89ABE3;
 }
 
 @media only screen and (min-width: 768px) {
