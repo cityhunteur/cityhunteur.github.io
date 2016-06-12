@@ -23,6 +23,16 @@
             </a>
           </li>
           {% endif %}
+          {% if site.author.instagram and site.footer-links-active.instagram %}
+              <li>
+                <a href="https://instagram.com/{{ site.author.instagram }}" title="Instagram">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          {% endif %}          
           {% if site.author.facebook and site.footer-links-active.facebook %}
           <li>
             <a href="https://www.facebook.com/{{ site.author.facebook }}" title="Facebook">

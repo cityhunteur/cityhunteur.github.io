@@ -28,7 +28,7 @@ logo: "/img/favicon.png"
 
 # List of links in the navigation bar
 navbar-links:
-  Home: ""
+  # Home: ""
   # About Me: "aboutme"
   # Author's home: "http://cityhunteur.github.io"
 
@@ -39,20 +39,33 @@ navbar-links:
 author:
   name: Pravin Goomannee
   email: "pravin.goomannee@gmail.com"
-  facebook: pravin.goomannee  # eg. daattali
-  github: cityhunteur    # eg. daattali
-  twitter: cityhuntyr   # eg. daattali
+  facebook: pravin.goomannee
+  github: cityhunteur
+  twitter: cityhuntyr
+  instagram: cityhunteur
 
 
 # Select which links to show in the footer
 footer-links-active:
-  rss: false
+  rss: true
   facebook: true
   email: true
   twitter: true
   github: true
   linkedin: false
   stackoverflow: false
+  instagram: true
+
+# Select which links to show in the footer
+header-links-active:
+  rss: false
+  facebook: false
+  email: true
+  twitter: true
+  github: true
+  linkedin: false
+  stackoverflow: false  
+  instagram: false
 
 # How to display the link to the website in the footer
 # Remove this if you don't want a link in the footer
