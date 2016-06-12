@@ -155,11 +155,12 @@ img {
 .navbar-custom .nav li a {
   font-weight: 700;
   color: rgba(0,0,0,0.8);
+  padding: 5px;
 }
 
 .navbar-custom .nav li a:hover,
 .navbar-custom .nav li a:focus {
-    color: #89ABE3;
+  color: rgba(0,0,0,0.8);
 }
 
 @media only screen and (min-width: 768px) {
