@@ -14,7 +14,58 @@
 
     <div class="collapse navbar-collapse" id="main-navbar">
       <ul class="nav navbar-nav navbar-right">
-	    {% for link in site.navbar-links %}
+          {% if site.author.twitter and site.header-links-active.twitter %}
+              <li>
+                <a href="https://twitter.com/{{ site.author.twitter }}" title="Twitter">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          {% endif %}
+          {% if site.author.github and site.header-links-active.github %}
+          <li>
+            <a href="https://github.com/{{ site.author.github }}" title="GitHub">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          {% endif %}
+          {% if site.author.instagram and site.header-links-active.instagram %}
+              <li>
+                <a href="https://instagram.com/{{ site.author.instagram }}" title="Instagram">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          {% endif %}
+          {% if site.author.facebook and site.header-links-active.facebook %}
+          <li>
+            <a href="https://www.facebook.com/{{ site.author.facebook }}" title="Facebook">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          {% endif %}
+          
+          {% if site.author.email and site.header-links-active.email %}
+          <li>
+            <a href="mailto:{{ site.author.email }}" title="Email me">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          {% endif %}
+<!-- 	       {% for link in site.navbar-links %}
 	      {% capture before %}{{ link[1] | split: "://" | first }}{% endcapture %}
 	      {% capture after %}{{ link[1] | split: "://" | last }}{% endcapture %}
         <li>
@@ -33,7 +84,7 @@
 
 	      <a href="{{ linkurl }}">{{ link[0] }}</a>
 	      </li>
-	    {% endfor %}
+	     {% endfor %} -->
       </ul>
     </div>
 
