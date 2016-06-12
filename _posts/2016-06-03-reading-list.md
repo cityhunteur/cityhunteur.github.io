@@ -39,6 +39,12 @@ Inspired by the legendary reading lists by Bill Gates and others, here is a list
 				<li class="books">
 						<a href="" target="_blank"><img alt="Enterprise Integration Patterns" src="/img/books/Enterprise-Integration-Patterns.jpg"></a>
 				</li>		
+				</div>				
+
+				<div class="col-md-3 col-sm-6">
+				<li class="books">
+						<a href="" target="_blank"><img alt="Patterns of Enterprise Application Architecture" src="/img/books/Patterns-of-Enterprise-Application-Architecture.jpg"></a>
+				</li>		
 				</div>
 
 				<div class="col-md-3 col-sm-6">
@@ -66,11 +72,6 @@ Inspired by the legendary reading lists by Bill Gates and others, here is a list
 			<div class="row">
 				<div class="col-md-3 col-sm-6">
 				<li class="books">
-						<a href="https://www.amazon.co.uk/Lean-Startup-Innovation-Successful-Businesses/dp/0670921602" target="_blank"><img alt="The Lean Startup" src="/img/books/The-Lean-Startup.jpg"></a>
-				</li>		
-				</div>
-				<div class="col-md-3 col-sm-6">
-				<li class="books">
 						<a href="https://www.amazon.co.uk/Zero-One-Notes-Start-Future/dp/0753555204" target="_blank"><img alt="Zero To One" src="/img/books/Zero-To-One.jpeg"></a>
 				</li>		
 				</div>			
@@ -78,7 +79,12 @@ Inspired by the legendary reading lists by Bill Gates and others, here is a list
 				<li class="books">
 						<a href="https://www.amazon.co.uk/ReWork-Change-Way-Work-Forever/dp/0091929784" target="_blank"><img alt="ReWork" src="/img/books/ReWork.jpeg"></a>
 				</li>		
-				</div>				
+				</div>	
+				<div class="col-md-3 col-sm-6">
+				<li class="books">
+						<a href="https://www.amazon.co.uk/Lean-Startup-Innovation-Successful-Businesses/dp/0670921602" target="_blank"><img alt="The Lean Startup" src="/img/books/The-Lean-Startup.jpg"></a>
+				</li>		
+				</div>			
 				<div class="col-md-3 col-sm-6">
 				<li class="books">
 						<a href="https://www.amazon.co.uk/Start-Why-Leaders-Inspire-Everyone/dp/0241958229" target="_blank"><img alt="Start With Why" src="/img/books/Start-With-Why.jpg"></a>
