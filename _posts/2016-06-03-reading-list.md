@@ -100,6 +100,26 @@ Inspired by the legendary reading lists by Bill Gates and others, here is a list
 						<a href="https://www.amazon.co.uk/E-Myth-Revisited-Small-Businesses-About/dp/0887307280" target="_blank"><img alt="The E-Myth Revisited" src="/img/books/The-E-Myth-Revisited.jpg"></a>
 				</li>		
 				</div>
+				<div class="col-md-3 col-sm-6">
+				<li class="books">
+						<a href="https://www.amazon.co.uk/Hard-Thing-About-Things-Building/dp/0062273205" target="_blank"><img alt="The Hard Thing About Hard Things" src="/img/books/The-Hard-Thing-About-Hard-Things.jpg"></a>
+				</li>		
+				</div>				
+			</div>
+		</div>
+	</section>
+</div>
+
+## Business
+<div>
+	<section class="gallery">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3 col-sm-6">
+				<li class="books">
+						<a href="https://www.amazon.co.uk/Bold-Create-Wealth-Impact-World/dp/1476709564" target="_blank"><img alt="Bold" src="/img/books/Bold.jpeg"></a>
+				</li>		
+				</div>
 			</div>
 		</div>
 	</section>
@@ -115,6 +135,16 @@ Inspired by the legendary reading lists by Bill Gates and others, here is a list
 						<a href="https://www.amazon.co.uk/Hello-Startup-Programmers-Building-Technologies/dp/1491909900" target="_blank"><img alt="Hello, Startup" src="/img/books/Hello-Startup.jpg"></a>
 				</li>		
 				</div>
+				<div class="col-md-3 col-sm-6">
+				<li class="books">
+						<a href="https://www.amazon.co.uk/Tipping-Point-Little-Things-Difference/dp/0349113467/" target="_blank"><img alt="Blink" src="/img/books/Blink.jpg"></a>
+				</li>		
+				</div>
+				<div class="col-md-3 col-sm-6">
+				<li class="books">
+						<a href="https://www.amazon.co.uk/Thinking-Fast-Slow-Daniel-Kahneman/dp/0141033576" target="_blank"><img alt="Thinking, Fast and Slow" src="/img/books/Thinking-Fast-and-Slow.jpg"></a>
+				</li>		
+				</div>				
 			</div>
 		</div>
 	</section>
@@ -127,7 +157,7 @@ Inspired by the legendary reading lists by Bill Gates and others, here is a list
 			<div class="row">
                 <div class="col-md-3 col-sm-6">
                 	<li class="books">
-						<a href="https://www.amazon.co.uk/Organize-Tomorrow-Today-Optimize-Performance/dp/0738218693" target="_blank"><img alt="Organize Tomorrow Today" src="/img//books/Organize-Tomorrow-Today.jpg"></a>
+						<a href="https://www.amazon.co.uk/Organize-Tomorrow-Today-Optimize-Performance/dp/0738218693" target="_blank"><img alt="Organize Tomorrow Today" src="/img/books/Organize-Tomorrow-Today.jpg"></a>
 					</li>		
 				</div>
 			</div>			
@@ -165,6 +195,21 @@ Inspired by the legendary reading lists by Bill Gates and others, here is a list
 	</section>
 </div>
 
+## Finance
+<div>
+	<section class="gallery">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3 col-sm-6">
+				<li class="books">
+						<a href="https://www.amazon.co.uk/Debt-First-Years-David-Graeber/dp/1612194192" target="_blank"><img alt="Debt" src="/img/books/Debt.jpg"></a>
+				</li>		
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
+
 ## Science
 <div>
 	<section class="gallery">
@@ -175,6 +220,16 @@ Inspired by the legendary reading lists by Bill Gates and others, here is a list
 						<a href="https://www.amazon.co.uk/Making-Modern-World-Materials-Dematerialization/dp/1119942535" target="_blank"><img alt="Mastery" src="/img//books/Making-the-Modern-World.jpg"></a>
 					</li>		
 				</div>
+				<div class="col-md-3 col-sm-6">
+                	<li class="books">
+						<a href="https://www.amazon.co.uk/dp/0262533057" target="_blank"><img alt="Algorithms" src="/img//books/Algorithms.jpg"></a>
+					</li>		
+				</div>
+				<div class="col-md-3 col-sm-6">
+                	<li class="books">
+						<a href="https://www.amazon.co.uk/Power-Habit-Why-What-Change/dp/1847946240/" target="_blank"><img alt="The Power of Habit" src="/img//books/The-Power-of-Habit.jpg"></a>
+					</li>		
+				</div>				
 			</div>
 		</div>
 	</section>
@@ -200,7 +255,34 @@ Inspired by the legendary reading lists by Bill Gates and others, here is a list
 				<li class="books">
 						<a href="https://www.amazon.co.uk/Nonviolent-Communication-Language-Life-Guides/dp/189200528X" target="_blank"><img alt="Outliers" src="/img/books/Nonviolent-Communication.jpg"></a>
 				</li>		
-			</div>			
+			</div>		
+			<div class="col-md-3 col-sm-6">
+				<li class="books">
+						<a href="https://www.amazon.co.uk/David-Goliath-Underdogs-Misfits-Battling/dp/0241959594" target="_blank"><img alt="David and Goliath" src="/img/books/David-and-Goliath.jpg"></a>
+				</li>		
+			</div>
+			<div class="row">
+                <div class="col-md-3 col-sm-6">
+                	<li class="books">
+						<a href="https://www.amazon.co.uk/Influence-Psychology-Robert-PhD-Cialdini/dp/006124189X" target="_blank"><img alt="Influence" src="/img//books/Influence.jpg"></a>
+					</li>		
+				</div>
+			</div>					
+		</div>
+	</section>
+</div>
+
+## Philosophy
+<div>
+	<section class="gallery">
+		<div class="container">
+			<div class="row">
+                <div class="col-md-3 col-sm-6">
+                	<li class="books">
+						<a href="https://www.amazon.co.uk/Tipping-Point-Little-Things-Difference/dp/0349113467/" target="_blank"><img alt="The Tipping Point" src="/img//books/The-Tipping-Point.jpg"></a>
+					</li>		
+				</div>			
+			</div>
 		</div>
 	</section>
 </div>
@@ -220,6 +302,21 @@ Inspired by the legendary reading lists by Bill Gates and others, here is a list
 						<a href="https://www.amazon.co.uk/Vinci-CURSE-design-people-interests-talents/dp/1523244879" target="_blank"><img alt="The Da Vinci Curse" src="/img//books/The-Da-Vinci-Curse.jpg"></a>
 					</li>		
 				</div>
+			</div>
+		</div>
+	</section>
+</div>
+
+## History
+<div>
+	<section class="gallery">
+		<div class="container">
+			<div class="row">
+                <div class="col-md-3 col-sm-6">
+                	<li class="books">
+						<a href="https://www.amazon.co.uk/Art-War-Sun-Tzu/dp/0981162614" target="_blank"><img alt="The Art of War" src="/img//books/The-Art-of-War.jpg"></a>
+					</li>		
+				</div>                
 			</div>
 		</div>
 	</section>
