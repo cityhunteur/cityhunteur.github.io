@@ -35,6 +35,18 @@
   font-weight: regular;
   font-style: normal;
 }
+@font-face { 
+  font-family: 'Objektiv';
+  src: local('Objektiv'), url(../assets/font/ObjektivMk1_Trial_Bd.ttf) format('truetype');Î 
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face { 
+  font-family: 'Objektiv';
+  src: local('Objektiv'), url(../assets/font/ObjektivMk3_Trial_Rg.ttf) format('truetype');Î 
+  font-weight: regular;
+  font-style: normal;
+}
 
 /* --- General --- */
 Ï
@@ -61,12 +73,12 @@ p a {
 }
 h1 {
   font-family: 'Stellar', 'Work Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: bold;
+  font-weight: 700;
   text-transform: uppercase;
 }
 h2,h3,h4,h5,h6 {
   font-family: 'Stellar', 'Work Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: medium;
+  font-weight: 500;
 }
 a {
   color: #89ABE3;
@@ -341,6 +353,7 @@ footer .theme-by a {
 }
 .post-preview .post-entry {
   font-family: 'AktivGrotesk', 'Work Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 300;
   border: 0;
   margin: 0;
   padding: 0;
@@ -448,7 +461,7 @@ header.header-page .page-heading .page-subheading {
   line-height: 27px;
   display: block;
   font-family: 'AktivGrotesk', 'Work Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 400;
+  font-weight: 500;
   margin: 0 auto;
 }
 
@@ -467,13 +480,12 @@ header.header-page .page-heading .page-subheading {
   .post-article {
     font-size: 21px;
     line-height: 1.58;
-    font-weight: 400;
+    font-weight: 300;
   }
   h2 {
     font-size: 28px;
     line-height: 1.22;
-    font-weight: medium;
-    font-family: 'Stellar', 'Work Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 500;
   }
 }
 
