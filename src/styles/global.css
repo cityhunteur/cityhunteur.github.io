@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* System fonts */
+
+/* Base styles */
+@layer base {
+  body {
+    @apply text-[rgba(0,0,0,0.8)] bg-white font-sans text-lg;
+  }
+
+  h1 {
+    @apply font-bold uppercase font-sans;
+  }
+
+  h2, h3, h4, h5, h6 {
+    @apply font-medium font-sans;
+  }
+
+  a {
+    @apply text-primary hover:text-primary;
+  }
+
+  p {
+    @apply my-7 leading-relaxed;
+  }
+
+  @screen md {
+    body {
+      @apply text-xl leading-relaxed;
+    }
+  }
+}
+
+/* Component styles */
+@layer components {
+  .post-card {
+    @apply border-b border-[rgba(0,0,0,0.1)] mb-10 pb-10 relative;
+  }
+
+  .post-title {
+    @apply text-2xl leading-relaxed;
+  }
+
+  .post-subtitle {
+    @apply text-lg font-light font-sans;
+  }
+
+  .read-more-btn {
+    @apply bg-primary text-white inline-block text-xs font-normal tracking-wider mt-5 py-3 px-6 uppercase font-sans;
+  }
+
+  /* Book styles for reading list */
+  .book-link {
+    @apply block transition-transform duration-300 hover:scale-105;
+  }
+
+  .book-cover {
+    @apply rounded shadow-lg max-h-[300px] w-auto mx-auto;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 9px 20px 0 rgba(0, 0, 0, 0.25);
+  }
+
+  @screen md {
+    .post-title {
+      @apply text-3xl leading-tight font-medium;
+    }
+  }
+}

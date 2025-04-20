@@ -1,0 +1,47 @@
+---
+import Layout from './Layout.astro';
+import { formatDate } from '../utils/date';
+
+export interface Props {
+  title: string;
+  subtitle?: string;
+  publishDate: Date;
+  description?: string;
+  image?: string;
+}
+
+const { title, subtitle, publishDate, description, image } = Astro.props;
+---
+
+<Layout title={title} description={description} image={image}>
+  <article class="prose prose-lg mx-auto">
+    <header class="mb-8 text-center">
+      <h1 class="text-3xl md:text-4xl mb-2">{title}</h1>
+      {subtitle && <h2 class="text-xl md:text-2xl font-normal text-[rgba(0,0,0,0.7)] mb-4">{subtitle}</h2>}
+      <time datetime={publishDate.toISOString()} class="text-sm text-[rgba(0,0,0,0.6)]">
+        {formatDate(publishDate)}
+      </time>
+    </header>
+    
+    <div class="post-content">
+      <slot />
+    </div>
+
+    <section class="mt-16">
+      <div id="disqus_thread"></div>
+      <script is:inline>
+        var disqus_config = function () {
+          this.page.url = import.meta.env.SITE + Astro.url.pathname;
+          this.page.identifier = Astro.url.pathname;
+        };
+        (function() {
+          var d = document, s = d.createElement('script');
+          s.src = 'https://cityhunteur.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </section>
+  </article>
+</Layout>

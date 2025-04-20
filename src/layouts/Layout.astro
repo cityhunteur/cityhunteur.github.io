@@ -1,0 +1,67 @@
+---
+// Import global styles
+import '../styles/global.css';
+
+export interface Props {
+  title: string;
+  description?: string;
+  image?: string;
+  subtitle?: string;
+}
+
+const { 
+  title, 
+  description = "Pravin Goomannee's personal blog", 
+  image = "/img/favicon.png",
+  subtitle
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/img/favicon.png" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta property="og:image" content={image} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta name="generator" content={Astro.generator} />
+    
+    <!-- No font preloading needed -->
+  </head>
+  <body class="min-h-screen flex flex-col">
+    <header class="bg-white border-b border-[rgba(0,0,0,0.1)]">
+      <div class="container mx-auto px-4 py-6 md:py-8">
+        <nav class="flex justify-between items-center">
+          <a href="/" class="font-bold text-[rgba(0,0,0,0.8)] uppercase text-sm tracking-wider">
+            Pravin Goomannee
+          </a>
+          <div class="space-x-6">
+            <a href="/about" class="font-bold text-[rgba(0,0,0,0.8)] uppercase text-xs tracking-wider">About</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="flex-grow container mx-auto px-4 py-8 md:py-16 max-w-3xl">
+      {subtitle && (
+        <header class="mb-12 text-center">
+          <h1 class="text-3xl md:text-5xl mb-4">{title}</h1>
+          {subtitle && <p class="text-xl text-[rgba(0,0,0,0.8)]">{subtitle}</p>}
+        </header>
+      )}
+      
+      <slot />
+    </main>
+
+    <footer class="bg-[#fafafa] py-8 border-t border-[rgba(0,0,0,0.1)]">
+      <div class="container mx-auto px-4 text-center text-sm md:text-base text-[rgba(0,0,0,0.6)]">
+        <p>&copy; {new Date().getFullYear()} Pravin Goomannee</p>
+      </div>
+    </footer>
+  </body>
+</html>

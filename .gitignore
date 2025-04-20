@@ -1,6 +1,36 @@
-_site
-.sass-cache
-.jekyll-metadata
+# build output
+docs/
+
+# dependencies
+node_modules/
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+bun.lockb
+
+# environment variables
+.env
+.env.production
+.env.local
+
+# macOS-specific files
+.DS_Store
 Vagrantfile
 
+# project specific
 _config_dev.yml
+temp-astro/
+
+# Astro
+.astro/
+
+# IDE
+.vscode/
+.idea/
+
+# Other OS/editor files
+Thumbs.db
+.cache/
