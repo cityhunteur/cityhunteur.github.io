@@ -16,8 +16,8 @@ const { title, subtitle, publishDate, description, image } = Astro.props;
 <Layout title={title} description={description} image={image}>
   <article class="prose prose-lg mx-auto">
     <header class="mb-8 text-center">
-      <h1 class="text-3xl md:text-4xl mb-2">{title}</h1>
-      {subtitle && <h2 class="text-xl md:text-2xl font-normal text-[rgba(0,0,0,0.8)] mb-4">{subtitle}</h2>}
+      <h1 class="text-xl md:text-2xl mb-2">{title}</h1>
+      {subtitle && <h2 class="text-lg md:text-xl font-normal text-[rgba(0,0,0,0.8)] mb-4">{subtitle}</h2>}
       <time datetime={publishDate.toISOString()} class="text-sm text-[rgba(0,0,0,0.8)]">
         {formatDate(publishDate)}
       </time>

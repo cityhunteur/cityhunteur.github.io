@@ -7,7 +7,7 @@
 /* Base styles */
 @layer base {
   body {
-    @apply text-[rgba(0,0,0,0.8)] bg-white font-sans text-lg;
+    @apply text-[rgba(0,0,0,0.8)] bg-white font-sans text-base;
   }
 
   h1 {
@@ -28,7 +28,7 @@
 
   @screen md {
     body {
-      @apply text-xl leading-relaxed;
+      @apply text-lg leading-relaxed;
     }
   }
 }
@@ -40,15 +40,15 @@
   }
 
   .post-title {
-    @apply text-2xl leading-relaxed text-gray-800 hover:text-gray-900;
+    @apply text-lg leading-relaxed text-gray-800 hover:text-gray-900;
   }
 
   .post-subtitle {
-    @apply text-lg font-light font-sans text-gray-600;
+    @apply text-base font-light font-sans text-gray-600;
   }
 
   .read-more-btn {
-    @apply border border-primary-dark text-primary-dark hover:bg-primary-dark hover:text-white inline-block text-xs font-normal tracking-wider mt-5 py-3 px-6 uppercase font-sans;
+    @apply border border-primary-dark text-primary-dark hover:bg-primary-dark hover:text-white inline-block text-sm font-normal tracking-wider mt-5 py-3 px-6 uppercase font-sans;
   }
 
   /* Book styles for reading list */
@@ -63,7 +63,7 @@
 
   @screen md {
     .post-title {
-      @apply text-3xl leading-tight font-medium text-gray-800 hover:text-gray-900;
+      @apply text-xl leading-tight font-medium text-gray-800 hover:text-gray-900;
     }
   }
 }
