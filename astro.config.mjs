@@ -4,7 +4,7 @@ import tailwind from '@astrojs/tailwind';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://cityhunteur.github.io',
-  outDir: './docs', // GitHub Pages requires the output to be in the docs folder
+  outDir: './dist', // Output directory for the build
   integrations: [
     tailwind({
       applyBaseStyles: false,
