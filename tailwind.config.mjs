@@ -22,6 +22,7 @@ export default {
       },
       colors: {
         primary: '#89ABE3', // Keeping the original primary color from the site
+        'primary-dark': '#1d4ed8', // Darker blue for WCAG AA contrast compliance
       },
       typography: {
         DEFAULT: {

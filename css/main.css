@@ -13,43 +13,43 @@
 }
 @font-face { 
   font-family: 'Stellar';
-  src: local('Stellar'), url(../assets/font/Stellar-Bold.otf) format('opentype');Î 
+  src: local('Stellar'), url(../assets/font/Stellar-Bold.otf) format('opentype'); 
   font-weight: bold;
   font-style: normal;
 }
 @font-face { 
   font-family: 'Stellar';
-  src: local('Stellar'), url(../assets/font/Stellar-light.otf) format('opentype');Î 
+  src: local('Stellar'), url(../assets/font/Stellar-light.otf) format('opentype'); 
   font-weight: light;
   font-style: normal;
 }
 @font-face { 
   font-family: 'Stellar';
-  src: local('Stellar'), url(../assets/font/Stellar-Medium.otf) format('opentype');Î 
+  src: local('Stellar'), url(../assets/font/Stellar-Medium.otf) format('opentype'); 
   font-weight: medium;
   font-style: normal;
 }
 @font-face { 
   font-family: 'Stellar';
-  src: local('Stellar'), url(../assets/font/Stellar-Regular.otf) format('opentype');Î 
+  src: local('Stellar'), url(../assets/font/Stellar-Regular.otf) format('opentype'); 
   font-weight: regular;
   font-style: normal;
 }
 @font-face { 
   font-family: 'Objektiv';
-  src: local('Objektiv'), url(../assets/font/ObjektivMk1_Trial_Bd.ttf) format('truetype');Î 
+  src: local('Objektiv'), url(../assets/font/ObjektivMk1_Trial_Bd.ttf) format('truetype'); 
   font-weight: bold;
   font-style: normal;
 }
 @font-face { 
   font-family: 'Objektiv';
-  src: local('Objektiv'), url(../assets/font/ObjektivMk3_Trial_Rg.ttf) format('truetype');Î 
+  src: local('Objektiv'), url(../assets/font/ObjektivMk3_Trial_Rg.ttf) format('truetype'); 
   font-weight: regular;
   font-style: normal;
 }
 
 /* --- General --- */
-Ï
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "AktivGrotesk", "Helvetica Neue", sans-serif;
   font-size: 18px;
@@ -69,7 +69,7 @@ p {
 }
 p a {
   /* text-decoration: underline */
-  color: ##89ABE3;
+  color: #0056b3;
 }
 h1 {
   font-family: 'Stellar', 'Work Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -81,14 +81,14 @@ h2,h3,h4,h5,h6 {
   font-weight: 500;
 }
 a {
-  color: #89ABE3;
+  color: #0056b3;
 }
 a:hover,
 a:focus {
-  color: #89ABE3;
+  color: #0056b3;
 }
 blockquote {
-  color: #fafafa;
+  color: #555555;
   font-style: italic;
 }
 hr.small {
@@ -120,12 +120,12 @@ hr.small {
 ::-moz-selection {
   color: white;
   text-shadow: none;
-  background: #89ABE3;
+  background: #0056b3;
 }
 ::selection {
-  color: white
-;  text-shadow: none;
-  background: #89ABE3;
+  color: white;
+  text-shadow: none;
+  background: #0056b3;
 }
 img::selection {
   color: white;
@@ -268,12 +268,12 @@ img {
 footer {
   padding: 30px 0;
   background: #fafafa;
-  border-top: 1px rgba(0, 0, 0, 0.3); solid;
+  border-top: 1px solid rgba(0, 0, 0, 0.3);
   font-size: 14px;
 }
 
 footer a {
-  color: #89ABE3;
+  color: #0056b3;
 }
 
 footer .list-inline {
@@ -289,7 +289,7 @@ footer .theme-by {
   margin: 10px 0 0;
 }
 footer .theme-by a {
-  color: rgb(119, 119, 119);
+  color: #555555;
 }
 
 @media only screen and (min-width: 768px) {
@@ -315,7 +315,7 @@ footer .theme-by a {
 
 @media only screen and (min-width: 768px) {
   .post-preview {
-    padding: 10% %;
+    padding: 10% 0;
   }
 }
 
@@ -360,10 +360,10 @@ footer .theme-by a {
   vertical-align: baseline;
 }
 .post-preview .post-read-more {
-  background-color: #89ABE3;
+  background-color: #0056b3;
   border: none;
   box-shadow: none;
-  color: #fff;
+  color: #000000;
   display: inline-block;
   font-size: 12px;
   font-weight: normal;
@@ -382,7 +382,7 @@ footer .theme-by a {
 }
 .post-read-more:hover,
 .post-read-more:focus {
-  background-color: #89ABE3;
+  background-color: #0056b3;
 }
 
 
@@ -492,10 +492,10 @@ header.header-page .page-heading .page-subheading {
 /* --- Pager --- */
 
 .pager li a {
-  background-color: #89ABE3;
+  background-color: #0056b3;
   border: none;
   box-shadow: none;
-  color: #fff;
+  color: #000000;
   display: inline-block;
   font-size: 12px;
   font-weight: normal;
@@ -508,7 +508,7 @@ header.header-page .page-heading .page-subheading {
 .pager li > a:hover,
 .pager li > a:focus {
     text-decoration: none;
-    background-color: #89ABE3;
+    background-color: #0056b3;
 }
 
 @media only screen and (min-width: 768px) {
