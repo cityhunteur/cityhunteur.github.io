@@ -48,7 +48,7 @@
   }
 
   .read-more-btn {
-    @apply border border-primary-dark text-primary-dark hover:bg-primary-dark hover:text-white inline-block text-sm font-normal tracking-wider mt-5 py-3 px-6 uppercase font-sans;
+    @apply bg-gray-800 text-white hover:bg-gray-900 transition-colors duration-200 inline-block text-sm font-semibold tracking-wide uppercase font-sans mt-5 py-3 px-6 no-underline;
   }
 
   /* Book styles for reading list */
