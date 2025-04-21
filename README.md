@@ -35,7 +35,7 @@ To build the site for production:
 bun run build
 ```
 
-This will generate static files in the `docs/` directory, which can be deployed to GitHub Pages.
+This will generate static files in the `dist/` directory, which can be deployed to GitHub Pages.
 
 ## Project Structure
 
@@ -44,11 +44,11 @@ This will generate static files in the `docs/` directory, which can be deployed 
 - `src/content/`: Blog posts and other content
 - `src/styles/`: Global CSS and Tailwind configuration
 - `public/`: Static assets like images and fonts
-- `docs/`: Build output directory for GitHub Pages
+- `dist/`: Build output directory for GitHub Pages
 
 ## Deployment
 
-This site is configured to deploy to GitHub Pages from the `docs/` directory on the `main` branch. After pushing changes to the main branch, the site will be automatically updated.
+This site is configured to deploy to GitHub Pages from the `dist/` directory on the `main` branch. After pushing changes to the main branch, the site will be automatically updated.
 
 ## License
 

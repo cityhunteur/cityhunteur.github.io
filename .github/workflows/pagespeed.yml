@@ -1,0 +1,74 @@
+name: PageSpeed Check
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  # Allow manual triggering
+  workflow_dispatch:
+
+jobs:
+  lighthouse:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build site
+        run: npm run build
+
+      - name: Install Lighthouse and other tools
+        run: npm install -g lighthouse serve wait-on
+
+      - name: Serve static site
+        run: serve -s dist -l 8080 &
+
+      - name: Wait for server to start
+        run: wait-on http://localhost:8080 -t 60000
+
+      - name: Run Lighthouse audit
+        run: |
+          lighthouse http://localhost:8080 \
+            --chrome-flags="--headless --no-sandbox" \
+            --output=json \
+            --output-path=./lhreport.json \
+            --only-categories=performance,accessibility,best-practices,seo
+
+      - name: Check performance score
+        run: |
+          PERFORMANCE=$(jq '.categories.performance.score' ./lhreport.json)
+          ACCESSIBILITY=$(jq '.categories.accessibility.score' ./lhreport.json)
+          BEST_PRACTICES=$(jq '.categories["best-practices"].score' ./lhreport.json)
+          SEO=$(jq '.categories.seo.score' ./lhreport.json)
+
+          echo "Performance score: $PERFORMANCE"
+          echo "Accessibility score: $ACCESSIBILITY"
+          echo "Best Practices score: $BEST_PRACTICES"
+          echo "SEO score: $SEO"
+
+          # Check if all scores are at least 0.99 (99%)
+          if (( $(echo "$PERFORMANCE < 0.99" | bc -l) )) || \
+             (( $(echo "$ACCESSIBILITY < 0.99" | bc -l) )) || \
+             (( $(echo "$BEST_PRACTICES < 0.99" | bc -l) )) || \
+             (( $(echo "$SEO < 0.99" | bc -l) )); then
+            echo "❌ One or more scores are below 99%"
+            exit 1
+          else
+            echo "✅ All scores are 99% or higher"
+          fi
+
+      - name: Upload Lighthouse report
+        uses: actions/upload-artifact@v4.6.2
+        with:
+          name: lighthouse-report
+          path: ./lhreport.json
