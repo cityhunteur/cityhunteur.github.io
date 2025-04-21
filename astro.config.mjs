@@ -1,4 +1,5 @@
 import { defineConfig } from 'astro/config';
+import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
@@ -7,6 +8,7 @@ export default defineConfig({
   build: {
     assets: 'assets',
   },
+  integrations: [sitemap()],
   vite: {
     css: {
       postcss: './postcss.config.cjs',
