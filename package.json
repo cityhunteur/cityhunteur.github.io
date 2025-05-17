@@ -8,7 +8,6 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "generate:images": "node scripts/generate-images.mjs",
     "lighthouse": "npm run build && npx serve -s dist -l 8080 & npx wait-on http://localhost:8080 && npx lighthouse http://localhost:8080 --chrome-flags=\"--headless --no-sandbox\" --view && pkill -f \"serve -s dist\""
   },
   "dependencies": {
