@@ -1,7 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
-import { generatePlaceholder } from '../utils/placeholder';
 
 // Get all blog posts, sorted by date
 const posts = await getCollection('blog', ({ data }) => {
@@ -45,13 +44,13 @@ const posts = await getCollection('blog', ({ data }) => {
           </div>
         </div>
         <img
-          src={generatePlaceholder(post.data.title)}
+          src={`/img/posts/${post.slug}.svg`}
           alt={`Illustration for ${post.data.title}`}
           class="post-thumb mt-4 md:mt-0 md:ml-6"
           loading="lazy"
           decoding="async"
-          width="160"
-          height="90"
+          width="288"
+          height="192"
         />
       </article>
     ))}
