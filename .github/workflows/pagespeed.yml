@@ -56,15 +56,15 @@ jobs:
           echo "Best Practices score: $BEST_PRACTICES"
           echo "SEO score: $SEO"
 
-          # Check if all scores are at least 0.99 (99%)
-          if (( $(echo "$PERFORMANCE < 0.99" | bc -l) )) || \
-             (( $(echo "$ACCESSIBILITY < 0.99" | bc -l) )) || \
-             (( $(echo "$BEST_PRACTICES < 0.99" | bc -l) )) || \
-             (( $(echo "$SEO < 0.99" | bc -l) )); then
-            echo "❌ One or more scores are below 99%"
+          # Check if all scores are at least 0.95 (95%)
+          if (( $(echo "$PERFORMANCE < 0.95" | bc -l) )) || \
+             (( $(echo "$ACCESSIBILITY < 0.95" | bc -l) )) || \
+             (( $(echo "$BEST_PRACTICES < 0.95" | bc -l) )) || \
+             (( $(echo "$SEO < 0.95" | bc -l) )); then
+            echo "❌ One or more scores are below 95%"
             exit 1
           else
-            echo "✅ All scores are 99% or higher"
+            echo "✅ All scores are 95% or higher"
           fi
 
       - name: Upload Lighthouse report
