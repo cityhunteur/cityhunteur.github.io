@@ -11,18 +11,18 @@
     "lighthouse": "npm run build && npx serve -s dist -l 8080 & npx wait-on http://localhost:8080 && npx lighthouse http://localhost:8080 --chrome-flags=\"--headless --no-sandbox\" --view && pkill -f \"serve -s dist\""
   },
   "dependencies": {
-    "@astrojs/tailwind": "^6.0.2",
+    "@astrojs/tailwind": "latest",
     "astro": "latest",
     "autoprefixer": "latest",
     "postcss": "latest"
   },
   "devDependencies": {
-    "@astrojs/sitemap": "^3.3.0",
-    "@tailwindcss/postcss": "^4.1.4",
-    "@tailwindcss/typography": "^0.5.16",
+    "@astrojs/sitemap": "latest",
+    "@tailwindcss/postcss": "latest",
+    "@tailwindcss/typography": "latest",
     "lighthouse": "latest",
     "serve": "latest",
-    "tailwindcss": "3",
+    "tailwindcss": "latest",
     "wait-on": "latest"
   }
 }
