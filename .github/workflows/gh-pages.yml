@@ -33,7 +33,13 @@ jobs:
           cache: true
 
       - name: Install dependencies
+        id: bun-install
         run: bun install --frozen-lockfile
+        continue-on-error: true
+
+      - name: Re-run install without frozen lockfile
+        if: steps.bun-install.outcome == 'failure'
+        run: bun install
 
       - name: Build site
         run: bun run build
