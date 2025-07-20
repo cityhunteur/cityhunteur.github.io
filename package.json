@@ -17,7 +17,7 @@
     "postcss": "latest"
   },
   "devDependencies": {
-    "@astrojs/sitemap": "^3.3.0",
+    "@astrojs/sitemap": "^3.4.1",
     "@tailwindcss/postcss": "^4.1.4",
     "@tailwindcss/typography": "^0.5.16",
     "lighthouse": "latest",
