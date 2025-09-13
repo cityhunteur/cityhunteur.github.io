@@ -1,0 +1,28 @@
+:root{
+  /* Container */
+  --container-max: 1200px;
+  --container-pad: clamp(16px, 5vw, 40px);
+
+  /* Grid & gaps */
+  --row-gap: clamp(28px, 3.2vw, 56px);
+  --col-gap: clamp(20px, 4vw, 56px);
+
+  /* Typography scale */
+  --size-0: clamp(14px, 0.6vw + 11px, 16px); /* small / overline */
+  --size-1: clamp(16px, 0.9vw + 12px, 18px); /* base */
+  --size-2: clamp(20px, 1.1vw + 14px, 22px); /* subheads */
+  --size-3: clamp(28px, 2.2vw + 14px, 44px); /* H2 titles */
+
+  --lh-tight: 1.2;
+  --lh-body: 1.55;
+
+  /* Colors */
+  --bg: #ffffff;
+  --text: #111111;
+  --muted: #666666;
+  --link: #0b66ff;
+
+  /* Label */
+  --label-tracking: 0.06em;
+}
+

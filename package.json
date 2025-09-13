@@ -1,28 +1,23 @@
 {
   "name": "cityhunteur-blog",
-  "type": "module",
   "version": "0.0.1",
+  "type": "module",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "lighthouse": "npm run build && npx serve -s dist -l 8080 & npx wait-on http://localhost:8080 && npx lighthouse http://localhost:8080 --chrome-flags=\"--headless --no-sandbox\" --view && pkill -f \"serve -s dist\""
+    "test": "echo \"No tests specified\" && exit 0"
   },
   "dependencies": {
-    "@astrojs/tailwind": "^6.0.2",
     "astro": "latest",
-    "autoprefixer": "latest",
-    "postcss": "latest"
+    "@fontsource/ibm-plex-sans": "latest",
+    "@fontsource/ibm-plex-mono": "latest",
+    "@fontsource/ia-writer-quattro": "latest"
   },
   "devDependencies": {
-    "@astrojs/sitemap": "^3.4.1",
-    "@tailwindcss/postcss": "^4.1.4",
-    "@tailwindcss/typography": "^0.5.16",
-    "lighthouse": "latest",
-    "serve": "latest",
-    "tailwindcss": "3",
-    "wait-on": "latest"
+    "@astrojs/sitemap": "latest"
   }
 }
+

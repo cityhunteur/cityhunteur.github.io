@@ -1,54 +1,13 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PostRow from '../components/PostRow.astro';
 import { getCollection } from 'astro:content';
 
-// Get all blog posts, sorted by date
-const posts = await getCollection('blog', ({ data }) => {
-  return !data.draft;
-}).then(posts => 
-  posts.sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf())
-);
+const posts = (await getCollection('posts')).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 ---
+<BaseLayout title="Archive">
+  <div class="post-list">
+    {posts.map(post => <PostRow post={post} />)}
+  </div>
+</BaseLayout>
 
-<Layout 
-  title="Pravin Goomannee" 
-  subtitle="Hacker · Developer · Writer · Technologist"
->
-  <div class="space-y-16">
-    {posts.map(post => (
-      <article class="post-card">
-        <a href={`/blog/${post.slug}`} class="block group">
-          <h2 class="post-title group-hover:text-primary transition-colors">
-            {post.data.title}
-          </h2>
-          
-          {post.data.subtitle && (
-            <h3 class="post-subtitle mt-2">
-              {post.data.subtitle}
-            </h3>
-          )}
-        </a>
-        
-        <div class="mt-4">
-          <p class="text-[rgba(0,0,0,0.8)]">
-            {post.body.length > 300 
-              ? post.body.substring(0, 300).replace(/[#*`]/g, '').trim() + '...'
-              : post.body.replace(/[#*`]/g, '').trim()}
-          </p>
-          <p class="mt-4">
-            <a href={`/blog/${post.slug}`} class="read-more-btn">
-              READ&nbsp;MORE
-            </a>
-          </p>
-        </div>
-      </article>
-    ))}
-  </div>
-  
-  <!-- Pagination placeholder for future implementation -->
-  <!-- 
-  <div class="flex justify-between mt-12">
-    <a href="/page/2" class="read-more-btn">Older Posts &rarr;</a>
-  </div>
-  -->
-</Layout>

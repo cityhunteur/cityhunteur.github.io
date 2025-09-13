@@ -1,69 +1,92 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "./tokens.css";
+@import "@fontsource/ibm-plex-sans/400.css";
+@import "@fontsource/ibm-plex-sans/700.css";
+@import "@fontsource/ibm-plex-mono/400.css";
+@import "@fontsource/ia-writer-quattro/400.css";
+@import "@fontsource/ia-writer-quattro/700.css";
 
-/* System fonts */
-
-/* Base styles */
-@layer base {
-  body {
-    @apply text-[rgba(0,0,0,0.8)] bg-white font-sans text-base;
-  }
-
-  h1 {
-    @apply font-bold uppercase font-sans;
-  }
-
-  h2, h3, h4, h5, h6 {
-    @apply font-medium font-sans;
-  }
-
-  a {
-    @apply text-primary hover:text-primary;
-  }
-
-  p {
-    @apply my-7 leading-relaxed;
-  }
-
-  @screen md {
-    body {
-      @apply text-lg leading-relaxed;
-    }
-  }
+:root {
+  --font-sans: 'IBM Plex Sans', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
 }
 
-/* Component styles */
-@layer components {
-  .post-card {
-    @apply border-b border-[rgba(0,0,0,0.1)] mb-10 pb-10 relative;
-  }
-
-  .post-title {
-    @apply text-lg leading-relaxed text-gray-800 hover:text-gray-900;
-  }
-
-  .post-subtitle {
-    @apply text-base font-light font-sans text-gray-600;
-  }
-
-  .read-more-btn {
-    @apply bg-gray-800 text-white hover:bg-gray-900 transition-colors duration-200 inline-block text-sm font-semibold tracking-wide uppercase font-sans mt-5 py-3 px-6 no-underline;
-  }
-
-  /* Book styles for reading list */
-  .book-link {
-    @apply block transition-transform duration-300 hover:scale-105;
-  }
-
-  .book-cover {
-    @apply rounded shadow-lg max-h-[300px] w-auto mx-auto;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 9px 20px 0 rgba(0, 0, 0, 0.25);
-  }
-
-  @screen md {
-    .post-title {
-      @apply text-xl leading-tight font-medium text-gray-800 hover:text-gray-900;
-    }
-  }
+.font-ia {
+  --font-sans: 'iA Writer Quattro', 'IBM Plex Sans', sans-serif;
 }
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-size: var(--size-1);
+  line-height: var(--lh-body);
+}
+
+body {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: var(--link);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+h1,
+h2,
+h3 {
+  line-height: var(--lh-tight);
+  font-weight: 700;
+  margin: 0 0 0.3em 0;
+}
+
+h1 {
+  font-size: var(--size-3);
+}
+
+h2 {
+  font-size: var(--size-3);
+}
+
+p {
+  margin: 0 0 1em 0;
+}
+
+.overline {
+  font-size: var(--size-0);
+  letter-spacing: var(--label-tracking);
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 0.4em 0;
+}
+
+.container {
+  max-width: var(--container-max);
+  padding-inline: var(--container-pad);
+  margin-inline: auto;
+}
+
+.post-list {
+  display: grid;
+  row-gap: var(--row-gap);
+}
+
