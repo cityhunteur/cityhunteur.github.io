@@ -1,55 +1,34 @@
-# Pravin Goomannee's Personal Blog
+# Personal Blog Archive
 
-This is my personal blog site built with Astro and Tailwind CSS.
+This site is built with [Astro 4](https://astro.build/) and a custom CSS stack. It showcases an archive list layout inspired by iA's Writer while using my own content and neutral branding.
 
 ## Local Development
 
-To run this site locally:
-
-1. Clone the repository
-
-   ```bash
-   git clone https://github.com/cityhunteur/cityhunteur.github.io.git
-   cd cityhunteur.github.io
-   ```
-
-2. Install dependencies
-
-   ```bash
-   bun install
-   ```
-
-3. Start the development server
-
-   ```bash
-   bun run dev
-   ```
-
-4. Open your browser and visit `http://localhost:4321`
-
-## Building for Production
-
-To build the site for production:
-
 ```bash
-bun run build
+npm install
+npm run dev
 ```
 
-This will generate static files in the `dist/` directory, which can be deployed to GitHub Pages.
+Then open [http://localhost:4321](http://localhost:4321).
+
+## Fonts
+
+The project ships with two typeface options via [`@fontsource`](https://fontsource.org/):
+
+- **Option B (default):** IBM Plex Sans (with optional IBM Plex Mono).
+- **Option A:** iA Writer Quattro. To enable it, pass `font="ia"` to `BaseLayout` and retain the footer credit: “Typeface: iA Writer Quattro — © iA. Used under its license.”
+
+Both fonts load with `font-display: swap` to limit layout shift.
 
 ## Project Structure
 
-- `src/pages/`: Contains all the page templates
-- `src/layouts/`: Reusable layout components
-- `src/content/`: Blog posts and other content
-- `src/styles/`: Global CSS and Tailwind configuration
-- `public/`: Static assets like images and fonts
-- `dist/`: Build output directory for GitHub Pages
-
-## Deployment
-
-This site is configured to deploy to GitHub Pages from the `dist/` directory on the `main` branch. After pushing changes to the main branch, the site will be automatically updated.
+- `src/styles/` – design tokens and global styles
+- `src/layouts/` – `BaseLayout` wrapper
+- `src/components/` – `PostRow` for the archive list
+- `src/content/posts/` – markdown posts with frontmatter
+- `src/pages/` – index and dynamic article routes
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+MIT
+
