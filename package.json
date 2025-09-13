@@ -1,1 +1,26 @@
-{\n  "name": "cityhunteur-blog",\n  "version": "0.0.1",\n  "type": "module",\n  "scripts": {\n    "dev": "astro dev",\n    "start": "astro dev",\n    "build": "astro build",\n    "preview": "astro preview",\n    "astro": "astro",\n    "test": "echo \"No tests specified\" && exit 0"\n  },\n  "dependencies": {\n    "astro": "latest",\n    "@fontsource/ibm-plex-sans": "latest",\n    "@fontsource/ibm-plex-mono": "latest",\n    "@fontsource/ia-writer-quattro": "latest"\n  },\n  "devDependencies": {\n    "@astrojs/sitemap": "latest"\n  },\n  "engines": {\n    "node": ">=18.17 <23"\n  },\n  "packageManager": "npm@10"\n}
+{
+  "name": "cityhunteur-blog",
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "dependencies": {
+    "astro": "latest",
+    "@fontsource/ibm-plex-sans": "latest",
+    "@fontsource/ibm-plex-mono": "latest",
+    "@fontsource/ia-writer-quattro": "latest"
+  },
+  "devDependencies": {
+    "@astrojs/sitemap": "latest"
+  },
+  "engines": {
+    "node": ">=18.17 <23"
+  },
+  "packageManager": "npm@10"
+}
