@@ -4,7 +4,7 @@ export interface Props {
   title?: string;
   font?: 'ibm' | 'ia';
 }
-const { title = 'Blog', font = 'ibm' } = Astro.props;
+const { title = "Pravin Goomannee's Blog", font = 'ibm' } = Astro.props;
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -17,7 +17,7 @@ const { title = 'Blog', font = 'ibm' } = Astro.props;
   <body class={font === 'ia' ? 'font-ia' : ''}>
     <header class="container">
       <nav class="breadcrumbs">
-        <a href="/" class="brand">My Blog</a>
+        <a href="/" class="brand">Pravin Goomannee's Blog</a>
         {Astro.slots.has('breadcrumbs') && <span>/</span>}
         <slot name="breadcrumbs" />
       </nav>
