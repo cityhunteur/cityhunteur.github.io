@@ -13,18 +13,18 @@ Inspired by the legendary reading lists by Bill Gates and others, here is a list
   <a href="https://www.amazon.co.uk/Design-Everyday-Things-revised-expanded/dp/0262525674" target="_blank" class="book-link">
     <img alt="The Design of Everyday Things" src="/img/books/The-Design-of-Everyday-Things.jpg" class="book-cover">
   </a>
-  <div class="book-link">
+  <a href="https://www.amazon.co.uk/Design-Patterns-Elements-Reusable-Object-Oriented/dp/0201633612" target="_blank" rel="noopener" class="book-link">
     <img alt="Design patterns : elements of reusable object-oriented software" src="/img/books/Design-patterns-elements-of-reusable-object-oriented-software.jpg" class="book-cover">
-  </div>
-  <div class="book-link">
+  </a>
+  <a href="https://www.amazon.co.uk/Continuous-Delivery-Deployment-Automation-Addison-Wesley/dp/0321601912" target="_blank" rel="noopener" class="book-link">
     <img alt="Continuous Delivery" src="/img/books/Continuous-Delivery.jpg" class="book-cover">
-  </div>
-  <div class="book-link">
+  </a>
+  <a href="https://www.amazon.co.uk/Enterprise-Integration-Patterns-Designing-Addison-Wesley/dp/0321200683" target="_blank" rel="noopener" class="book-link">
     <img alt="Enterprise Integration Patterns" src="/img/books/Enterprise-Integration-Patterns.jpg" class="book-cover">
-  </div>
-  <div class="book-link">
+  </a>
+  <a href="https://www.amazon.co.uk/Patterns-Enterprise-Application-Architecture-Martin/dp/0321127420" target="_blank" rel="noopener" class="book-link">
     <img alt="Patterns of Enterprise Application Architecture" src="/img/books/Patterns-of-Enterprise-Application-Architecture.jpg" class="book-cover">
-  </div>
+  </a>
   <a href="https://www.amazon.co.uk/Mythical-Man-month-Essays-Software-Engineering/dp/0201835959" target="_blank" class="book-link">
     <img alt="The Mythical Man-month" src="/img/books/The-Mythical-Man-month.jpg" class="book-cover">
   </a>
