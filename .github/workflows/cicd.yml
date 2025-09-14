@@ -1,0 +1,97 @@
+name: CICD
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Lint, Test, Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Lint (astro check)
+        run: npx astro check
+
+      - name: Test
+        run: npm test
+
+      - name: Build
+        run: npm run build
+
+      # PageSpeed/Lighthouse audit (merge from pagespeed workflow)
+      - name: Install Lighthouse and tools
+        run: npm i -g lighthouse serve wait-on
+
+      - name: Serve static site
+        run: serve -s dist -l 8080 &
+
+      - name: Wait for server to start
+        run: npx wait-on http://localhost:8080 -t 60000
+
+      - name: Run Lighthouse audit
+        run: |
+          lighthouse http://localhost:8080 \
+            --chrome-flags="--headless --no-sandbox" \
+            --preset=desktop \
+            --output=json \
+            --output-path=./lhreport.json \
+            --only-categories=performance,accessibility,best-practices,seo
+
+      - name: Enforce Lighthouse thresholds (category-specific)
+        env:
+          LH_MIN_PERF: '0.90'
+          LH_MIN_A11Y: '0.90'
+          LH_MIN_BEST: '0.90'
+          LH_MIN_SEO: '0.90'
+        run: |
+          node -e "const fs=require('fs');const r=JSON.parse(fs.readFileSync('./lhreport.json','utf8'));const scores={performance:r.categories.performance.score,accessibility:r.categories.accessibility.score,best:r.categories['best-practices'].score,seo:r.categories.seo.score};const mins={performance:parseFloat(process.env.LH_MIN_PERF||'0.90'),accessibility:parseFloat(process.env.LH_MIN_A11Y||'0.90'),best:parseFloat(process.env.LH_MIN_BEST||'0.90'),seo:parseFloat(process.env.LH_MIN_SEO||'0.90')};const round2=v=>Math.round(v*100)/100;const report=Object.fromEntries(Object.entries(scores).map(function(e){var k=e[0],v=e[1];return [k,{score:round2(v),min:mins[k]}]}));const rows=Object.entries(report).map(function(e){var k=e[0],o=e[1];return ['| ',k,' | ',o.score,' | ',o.min,' | ',(o.score<o.min?'❌ fail':'✅ pass'),' |'].join('')}).join('\\n');const md='\n### Lighthouse thresholds\n\n| Category | Score | Min | Status |\n|---|---:|---:|:--:|\n'+rows+'\n';if(process.env.GITHUB_STEP_SUMMARY){fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, md)};console.log(md);const failed=Object.entries(report).filter(function(e){return e[1].score<e[1].min}).map(function(e){return e[0]});if(failed.length){console.error('Failing categories:',failed.join(', '));process.exit(1)}else{console.log('All categories meet thresholds.')}"
+
+      - name: Upload Lighthouse report
+        uses: actions/upload-artifact@v4
+        with:
+          name: lighthouse-report
+          path: ./lhreport.json
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./dist
+
+  deploy:
+    name: Deploy to GitHub Pages
+    needs: build
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4

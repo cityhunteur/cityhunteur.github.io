@@ -12,6 +12,7 @@ const { title = 'Blog', font = 'ibm' } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
+    <link rel="preconnect" href="https://picsum.photos" crossorigin>
   </head>
   <body class={font === 'ia' ? 'font-ia' : ''}>
     <header class="container">
@@ -55,4 +56,3 @@ const { title = 'Blog', font = 'ibm' } = Astro.props;
   margin-top: var(--row-gap);
 }
 </style>
-
