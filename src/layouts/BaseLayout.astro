@@ -26,10 +26,8 @@ const { title = "Pravin Goomannee's Blog", font = 'ibm' } = Astro.props;
       <slot />
     </main>
     <footer class="container">
-      {font === 'ia' ? (
+      {font === 'ia' && (
         <p class="type-note">Typeface: iA Writer Quattro — © iA. Used under its license.</p>
-      ) : (
-        <p class="type-note">Typeface: IBM Plex Sans.</p>
       )}
     </footer>
   </body>

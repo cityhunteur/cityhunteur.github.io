@@ -13,18 +13,18 @@ Inspired by the legendary reading lists by Bill Gates and others, here is a list
   <a href="https://www.amazon.co.uk/Design-Everyday-Things-revised-expanded/dp/0262525674" target="_blank" class="book-link">
     <img alt="The Design of Everyday Things" src="/img/books/The-Design-of-Everyday-Things.jpg" class="book-cover">
   </a>
-  <a href="#" target="_blank" class="book-link">
+  <div class="book-link">
     <img alt="Design patterns : elements of reusable object-oriented software" src="/img/books/Design-patterns-elements-of-reusable-object-oriented-software.jpg" class="book-cover">
-  </a>
-  <a href="#" target="_blank" class="book-link">
+  </div>
+  <div class="book-link">
     <img alt="Continuous Delivery" src="/img/books/Continuous-Delivery.jpg" class="book-cover">
-  </a>
-  <a href="#" target="_blank" class="book-link">
+  </div>
+  <div class="book-link">
     <img alt="Enterprise Integration Patterns" src="/img/books/Enterprise-Integration-Patterns.jpg" class="book-cover">
-  </a>
-  <a href="#" target="_blank" class="book-link">
+  </div>
+  <div class="book-link">
     <img alt="Patterns of Enterprise Application Architecture" src="/img/books/Patterns-of-Enterprise-Application-Architecture.jpg" class="book-cover">
-  </a>
+  </div>
   <a href="https://www.amazon.co.uk/Mythical-Man-month-Essays-Software-Engineering/dp/0201835959" target="_blank" class="book-link">
     <img alt="The Mythical Man-month" src="/img/books/The-Mythical-Man-month.jpg" class="book-cover">
   </a>
