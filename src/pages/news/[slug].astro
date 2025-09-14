@@ -1,0 +1,33 @@
+---
+import NewsLayout from '@/layouts/NewsLayout.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('news');
+  return posts.map(post => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { title, category, image, tagline } = post.data;
+const { Content } = await post.render();
+---
+<NewsLayout title={title}>
+  <article>
+    <p class="overline">{category}</p>
+    <h1>{title}</h1>
+    <img src={image} alt={tagline} loading="lazy" />
+    <Content />
+  </article>
+</NewsLayout>
+
+<style>
+article img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  margin-bottom: 1em;
+}
+</style>

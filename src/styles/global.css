@@ -113,3 +113,27 @@ p {
   aspect-ratio: 3 / 4;
   object-fit: cover;
 }
+
+/* News sections */
+.section {
+  width: 100vw;
+  margin-inline: calc(50% - 50vw);
+  padding: var(--section-pad);
+  background: var(--section-bg, var(--light-bg));
+  color: var(--section-text, var(--text-dark));
+}
+
+.cta {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  background: var(--section-accent, var(--link));
+  color: var(--text-light);
+  font-weight: 700;
+  text-decoration: none;
+  transition: filter 0.2s;
+}
+
+.cta:hover {
+  filter: brightness(0.9);
+}

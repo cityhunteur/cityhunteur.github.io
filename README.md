@@ -1,6 +1,6 @@
 # Personal Blog Archive
 
-This site is built with [Astro 4](https://astro.build/) and a custom CSS stack. It showcases an archive list layout inspired by iA's Writer while using my own content and neutral branding.
+This site is built with [Astro 4](https://astro.build/) and a custom CSS stack. It showcases an archive list layout and a News page of full‑bleed hero sections inspired by iA's News feed while using my own content and neutral branding.
 
 ## Local Development
 
@@ -23,10 +23,11 @@ Both fonts load with `font-display: swap` to limit layout shift.
 ## Project Structure
 
 - `src/styles/` – design tokens and global styles
-- `src/layouts/` – `BaseLayout` wrapper
-- `src/components/` – `PostRow` for the archive list
+- `src/layouts/` – `BaseLayout` and `NewsLayout` wrappers
+- `src/components/` – `PostRow` and `NewsSection` components
 - `src/content/posts/` – markdown posts with frontmatter
-- `src/pages/` – index and dynamic article routes
+- `src/content/news/` – news entries for the News page
+- `src/pages/` – index, News index, and dynamic article routes
 
 ## License
 
