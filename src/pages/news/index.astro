@@ -1,0 +1,27 @@
+---
+import NewsLayout from '@/layouts/NewsLayout.astro';
+import NewsSection from '@/components/NewsSection.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('news')).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+const fallbacks = [
+  { background: '#000000', textColor: '#ffffff', accentColor: '#7454f6', imagePosition: 'right' },
+  { background: '#f5f5f5', textColor: '#111111', accentColor: '#0094ff', imagePosition: 'bottom' },
+];
+function pickTheme(theme, index) {
+  return theme ?? fallbacks[index % fallbacks.length];
+}
+---
+<NewsLayout title="News">
+  {posts.map((post, i) => (
+    <NewsSection
+      category={post.data.category}
+      title={post.data.title}
+      tagline={post.data.tagline}
+      ctaText="READ ARTICLE"
+      ctaUrl={`/news/${post.slug}/`}
+      image={post.data.image}
+      theme={pickTheme(post.data.theme, i)}
+    />
+  ))}
+</NewsLayout>

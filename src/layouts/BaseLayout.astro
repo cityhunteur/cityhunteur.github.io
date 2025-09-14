@@ -5,6 +5,10 @@ export interface Props {
   font?: 'ibm' | 'ia';
 }
 const { title = "Pravin Goomannee's Blog", font = 'ibm' } = Astro.props;
+if (font === 'ia') {
+  await import('@fontsource/ia-writer-quattro/400.css');
+  await import('@fontsource/ia-writer-quattro/700.css');
+}
 ---
 <!DOCTYPE html>
 <html lang="en">

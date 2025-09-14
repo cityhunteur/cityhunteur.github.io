@@ -1,0 +1,87 @@
+---
+export interface Theme {
+  background: string;
+  textColor: string;
+  accentColor: string;
+  imagePosition?: 'right' | 'bottom';
+}
+export interface Props {
+  category: string;
+  title: string;
+  tagline: string;
+  ctaText: string;
+  ctaUrl: string;
+  image: string;
+  alt?: string;
+  theme: Theme;
+}
+const { category, title, tagline, ctaText, ctaUrl, image, alt = title, theme } = Astro.props;
+---
+<section class="section" style={`--section-bg:${theme.background}; --section-text:${theme.textColor}; --section-accent:${theme.accentColor};`}>
+  <div class:list={["section-inner", theme.imagePosition === 'right' ? 'is-right' : 'is-bottom']}>
+    <div class="section-content">
+      <p class="label">{category}</p>
+      <h2 class="headline">{title}</h2>
+      <p class="tagline">{tagline}</p>
+      <a href={ctaUrl} class="cta">{ctaText}</a>
+    </div>
+    <img src={image} alt={alt} loading="lazy" class="illustration" />
+  </div>
+</section>
+
+<style>
+.section-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--section-gap);
+  max-width: var(--container-max);
+  margin-inline: auto;
+}
+.section-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--section-gap);
+}
+.is-right {
+  flex-direction: row;
+  text-align: left;
+}
+.is-right .section-content {
+  align-items: flex-start;
+}
+.is-right .illustration {
+  flex: 1;
+}
+.is-right .section-content {
+  flex: 1;
+}
+.label {
+  font-size: var(--label-size);
+  letter-spacing: var(--label-tracking);
+  text-transform: uppercase;
+}
+.headline {
+  font-size: var(--h1-size);
+  line-height: var(--lh-tight);
+}
+.tagline {
+  font-size: var(--h2-size);
+  line-height: var(--lh-body);
+}
+.illustration {
+  width: 100%;
+  height: auto;
+}
+@media (max-width: 900px) {
+  .is-right {
+    flex-direction: column;
+    text-align: center;
+  }
+  .is-right .section-content {
+    align-items: center;
+  }
+}
+</style>
