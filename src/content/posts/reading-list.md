@@ -9,7 +9,7 @@ Inspired by the legendary reading lists by Bill Gates and others, here is a list
 
 ## Engineering
 
-<div class="grid grid-cols-2 md:grid-cols-4 gap-6 my-8">
+<div class="book-grid">
   <a href="https://www.amazon.co.uk/Design-Everyday-Things-revised-expanded/dp/0262525674" target="_blank" class="book-link">
     <img alt="The Design of Everyday Things" src="/img/books/The-Design-of-Everyday-Things.jpg" class="book-cover">
   </a>
@@ -35,7 +35,7 @@ Inspired by the legendary reading lists by Bill Gates and others, here is a list
 
 ## Leadership
 
-<div class="grid grid-cols-2 md:grid-cols-4 gap-6 my-8">
+<div class="book-grid">
   <a href="https://www.amazon.co.uk/Zero-One-Notes-Start-Future/dp/0753555204" target="_blank" class="book-link">
     <img alt="Zero To One" src="/img/books/Zero-To-One.jpeg" class="book-cover">
   </a>
@@ -61,7 +61,7 @@ Inspired by the legendary reading lists by Bill Gates and others, here is a list
 
 ## Business
 
-<div class="grid grid-cols-2 md:grid-cols-4 gap-6 my-8">
+<div class="book-grid">
   <a href="https://www.amazon.co.uk/Bold-Create-Wealth-Impact-World/dp/1476709564" target="_blank" class="book-link">
     <img alt="Bold" src="/img/books/Bold.jpeg" class="book-cover">
   </a>
@@ -69,7 +69,7 @@ Inspired by the legendary reading lists by Bill Gates and others, here is a list
 
 ## Management
 
-<div class="grid grid-cols-2 md:grid-cols-4 gap-6 my-8">
+<div class="book-grid">
   <a href="https://www.amazon.co.uk/Hello-Startup-Programmers-Building-Technologies/dp/1491909900" target="_blank" class="book-link">
     <img alt="Hello, Startup" src="/img/books/Hello-Startup.jpg" class="book-cover">
   </a>
@@ -83,7 +83,7 @@ Inspired by the legendary reading lists by Bill Gates and others, here is a list
 
 ## Time Management
 
-<div class="grid grid-cols-2 md:grid-cols-4 gap-6 my-8">
+<div class="book-grid">
   <a href="https://www.amazon.co.uk/Organize-Tomorrow-Today-Optimize-Performance/dp/0738218693" target="_blank" class="book-link">
     <img alt="Organize Tomorrow Today" src="/img/books/Organize-Tomorrow-Today.jpg" class="book-cover">
   </a>
@@ -91,7 +91,7 @@ Inspired by the legendary reading lists by Bill Gates and others, here is a list
 
 ## Knowledge
 
-<div class="grid grid-cols-2 md:grid-cols-4 gap-6 my-8">
+<div class="book-grid">
   <a href="https://www.amazon.co.uk/Where-Good-Ideas-Come-Innovation/dp/0141033401" target="_blank" class="book-link">
     <img alt="Where Good Ideas Come From" src="/img/books/Where-Good-Ideas-Come-From.jpg" class="book-cover">
   </a>
@@ -99,7 +99,7 @@ Inspired by the legendary reading lists by Bill Gates and others, here is a list
 
 ## Economics
 
-<div class="grid grid-cols-2 md:grid-cols-4 gap-6 my-8">
+<div class="book-grid">
   <a href="https://www.amazon.co.uk/Age-Cryptocurrency-Bitcoin-Challenging-Economic/dp/1250065631" target="_blank" class="book-link">
     <img alt="Age of Cryptocurrency" src="/img/books/Age-of-Cryptocurrency.jpg" class="book-cover">
   </a>
@@ -107,7 +107,7 @@ Inspired by the legendary reading lists by Bill Gates and others, here is a list
 
 ## Finance
 
-<div class="grid grid-cols-2 md:grid-cols-4 gap-6 my-8">
+<div class="book-grid">
   <a href="https://www.amazon.co.uk/Debt-First-Years-David-Graeber/dp/1612194192" target="_blank" class="book-link">
     <img alt="Debt" src="/img/books/Debt.jpg" class="book-cover">
   </a>
@@ -115,7 +115,7 @@ Inspired by the legendary reading lists by Bill Gates and others, here is a list
 
 ## Science
 
-<div class="grid grid-cols-2 md:grid-cols-4 gap-6 my-8">
+<div class="book-grid">
   <a href="https://www.amazon.co.uk/Making-Modern-World-Materials-Dematerialization/dp/1119942535" target="_blank" class="book-link">
     <img alt="Making the Modern World" src="/img/books/Making-the-Modern-World.jpg" class="book-cover">
   </a>
@@ -129,7 +129,7 @@ Inspired by the legendary reading lists by Bill Gates and others, here is a list
 
 ## Psychology
 
-<div class="grid grid-cols-2 md:grid-cols-4 gap-6 my-8">
+<div class="book-grid">
   <a href="https://www.amazon.co.uk/Dont-Make-Me-Think-Usability/dp/0321965515" target="_blank" class="book-link">
     <img alt="Don't Make Me Think" src="/img/books/Dont-Make-Me-Think.jpg" class="book-cover">
   </a>
@@ -149,7 +149,7 @@ Inspired by the legendary reading lists by Bill Gates and others, here is a list
 
 ## Philosophy
 
-<div class="grid grid-cols-2 md:grid-cols-4 gap-6 my-8">
+<div class="book-grid">
   <a href="https://www.amazon.co.uk/Tipping-Point-Little-Things-Difference/dp/0349113467/" target="_blank" class="book-link">
     <img alt="The Tipping Point" src="/img/books/The-Tipping-Point.jpg" class="book-cover">
   </a>
@@ -173,4 +173,3 @@ Inspired by the legendary reading lists by Bill Gates and others, here is a list
     <img alt="The Art of War" src="/img/books/The-Art-of-War.jpg" class="book-cover">
   </a>
 </div>
-
