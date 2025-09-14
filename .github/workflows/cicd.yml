@@ -62,11 +62,14 @@ jobs:
             --output-path=./lhreport.json \
             --only-categories=performance,accessibility,best-practices,seo
 
-      - name: Report Lighthouse scores (non-blocking)
+      - name: Enforce Lighthouse thresholds (category-specific)
         env:
-          LIGHTHOUSE_MIN: '0.99'
+          LH_MIN_PERF: '0.90'
+          LH_MIN_A11Y: '0.95'
+          LH_MIN_BEST: '0.95'
+          LH_MIN_SEO: '0.95'
         run: |
-          node -e "const fs=require('fs');const min=parseFloat(process.env.LIGHTHOUSE_MIN||'0.99');const r=JSON.parse(fs.readFileSync('./lhreport.json','utf8'));const raw={performance:r.categories.performance.score,accessibility:r.categories.accessibility.score,best:r.categories['best-practices'].score,seo:r.categories.seo.score};const round2=v=>Math.round(v*100)/100;const s={performance:round2(raw.performance),accessibility:round2(raw.accessibility),best:round2(raw.best),seo:round2(raw.seo)};const warn=(k)=>s[k]<min;console.log('Scores (rounded to 2dp):',s,'Threshold:',min);const rows=Object.entries(s).map(([k,v])=>`| ${k} | ${v} | ${v<min?'⚠️ below': '✅ pass'} |`).join('\n');const md=`\n### Lighthouse summary\n\nThreshold: ${min}\n\n| Category | Score | Status |\n|---|---:|:--:|\n${rows}\n`;if(process.env.GITHUB_STEP_SUMMARY){fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, md)};if(Object.keys(s).some(warn)){console.log('⚠️ One or more scores are below threshold; continuing (non-blocking).')}else{console.log('✅ All scores meet threshold.')}"
+          node -e "const fs=require('fs');const r=JSON.parse(fs.readFileSync('./lhreport.json','utf8'));const scores={performance:r.categories.performance.score,accessibility:r.categories.accessibility.score,best:r.categories['best-practices'].score,seo:r.categories.seo.score};const mins={performance:parseFloat(process.env.LH_MIN_PERF||'0.90'),accessibility:parseFloat(process.env.LH_MIN_A11Y||'0.95'),best:parseFloat(process.env.LH_MIN_BEST||'0.95'),seo:parseFloat(process.env.LH_MIN_SEO||'0.95')};const round2=v=>Math.round(v*100)/100;const report=Object.fromEntries(Object.entries(scores).map(([k,v])=>[k,{score:round2(v),min:mins[k]}]));const rows=Object.entries(report).map(([k,o])=>`| ${k} | ${o.score} | ${o.min} | ${o.score<o.min?'❌ fail':'✅ pass'} |`).join('\n');const md=`\n### Lighthouse thresholds\n\n| Category | Score | Min | Status |\n|---|---:|---:|:--:|\n${rows}\n`;if(process.env.GITHUB_STEP_SUMMARY){fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, md)};console.log(md);const failed=Object.entries(report).filter(([k,o])=>o.score<o.min).map(([k])=>k);if(failed.length){console.error('Failing categories:',failed.join(', '));process.exit(1)}else{console.log('All categories meet thresholds.')}"
 
       - name: Upload Lighthouse report
         uses: actions/upload-artifact@v4
