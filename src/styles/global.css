@@ -2,8 +2,7 @@
 @import "@fontsource/ibm-plex-sans/400.css";
 @import "@fontsource/ibm-plex-sans/700.css";
 @import "@fontsource/ibm-plex-mono/400.css";
-@import "@fontsource/ia-writer-quattro/400.css";
-@import "@fontsource/ia-writer-quattro/700.css";
+/* iA Writer Quattro is optional; loaded only when needed via layout */
 
 :root {
   --font-sans: 'IBM Plex Sans', sans-serif;
@@ -89,4 +88,3 @@ p {
   display: grid;
   row-gap: var(--row-gap);
 }
-
