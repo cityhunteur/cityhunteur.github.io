@@ -92,6 +92,7 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Deploy
+      # Mirrors manual workflow in .github/workflows/gh-pages.yml
+      - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
