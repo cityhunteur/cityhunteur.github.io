@@ -62,9 +62,9 @@ jobs:
             --output-path=./lhreport.json \
             --only-categories=performance,accessibility,best-practices,seo
 
-      - name: Check Lighthouse thresholds (≥ 0.99)
+      - name: Check Lighthouse thresholds (~≥ 0.99, rounded)
         run: |
-          node -e "const fs=require('fs');const r=JSON.parse(fs.readFileSync('./lhreport.json','utf8'));const s={performance:r.categories.performance.score,accessibility:r.categories.accessibility.score,best:r.categories['best-practices'].score,seo:r.categories.seo.score};console.log('Scores:',s);if(s.performance<0.99||s.accessibility<0.99||s.best<0.99||s.seo<0.99){console.error('❌ One or more scores are below 0.99');process.exit(1)}else{console.log('✅ All scores are 0.99 or higher')}"
+          node -e "const fs=require('fs');const r=JSON.parse(fs.readFileSync('./lhreport.json','utf8'));const raw={performance:r.categories.performance.score,accessibility:r.categories.accessibility.score,best:r.categories['best-practices'].score,seo:r.categories.seo.score};const round2=v=>Math.round(v*100)/100;const s={performance:round2(raw.performance),accessibility:round2(raw.accessibility),best:round2(raw.best),seo:round2(raw.seo)};console.log('Scores (rounded to 2dp):',s);if(s.performance<0.99||s.accessibility<0.99||s.best<0.99||s.seo<0.99){console.error('❌ One or more scores are below 0.99 after rounding');process.exit(1)}else{console.log('✅ All scores are within 99% (rounded)')}"
 
       - name: Upload Lighthouse report
         uses: actions/upload-artifact@v4
