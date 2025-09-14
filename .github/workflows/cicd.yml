@@ -1,0 +1,92 @@
+name: CICD
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Lint, Test, Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Lint (astro check)
+        run: npx astro check
+
+      - name: Test
+        run: npm test
+
+      - name: Build
+        run: npm run build
+
+      # PageSpeed/Lighthouse audit (merge from pagespeed workflow)
+      - name: Install Lighthouse and tools
+        run: npm i -g lighthouse serve wait-on
+
+      - name: Serve static site
+        run: serve -s dist -l 8080 &
+
+      - name: Wait for server to start
+        run: npx wait-on http://localhost:8080 -t 60000
+
+      - name: Run Lighthouse audit
+        run: |
+          lighthouse http://localhost:8080 \
+            --chrome-flags="--headless --no-sandbox" \
+            --output=json \
+            --output-path=./lhreport.json \
+            --only-categories=performance,accessibility,best-practices,seo
+
+      - name: Check Lighthouse thresholds (≥ 0.99)
+        run: |
+          node -e "const fs=require('fs');const r=JSON.parse(fs.readFileSync('./lhreport.json','utf8'));const s={performance:r.categories.performance.score,accessibility:r.categories.accessibility.score,best:r.categories['best-practices'].score,seo:r.categories.seo.score};console.log('Scores:',s);if(s.performance<0.99||s.accessibility<0.99||s.best<0.99||s.seo<0.99){console.error('❌ One or more scores are below 0.99');process.exit(1)}else{console.log('✅ All scores are 0.99 or higher')}"
+
+      - name: Upload Lighthouse report
+        uses: actions/upload-artifact@v4
+        with:
+          name: lighthouse-report
+          path: ./lhreport.json
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./dist
+
+  deploy:
+    name: Deploy to GitHub Pages
+    needs: build
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
