@@ -4,8 +4,8 @@ export interface Props {
   post: CollectionEntry<'posts'>;
 }
 const { post } = Astro.props;
-const { title, slug, category, cover } = post.data;
-const url = `/${slug}/`;
+const { title, category, cover } = post.data;
+const url = `/${post.slug}/`;
 ---
 <article class="row">
   <div class="meta">
