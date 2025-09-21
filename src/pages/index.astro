@@ -5,9 +5,27 @@ import { getCollection } from 'astro:content';
 
 const posts = (await getCollection('posts')).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 ---
-<BaseLayout title="Archive">
+<BaseLayout title="Pravin Goomannee — Blog">
+  <header class="page-lede">
+    <h1>Systems, craft, and notes from an engineering journey.</h1>
+    <p>
+      Essays on building software, leading teams, and the side projects that keep me curious.
+    </p>
+  </header>
   <div class="post-list">
-    {posts.map(post => <PostRow post={post} />)}
+    {posts.map((post) => <PostRow post={post} />)}
   </div>
 </BaseLayout>
+
+<style>
+.page-lede {
+  max-width: 50ch;
+  margin-bottom: 3em;
+}
+
+.page-lede p {
+  margin-top: 1em;
+  text-align: left;
+}
+</style>
 

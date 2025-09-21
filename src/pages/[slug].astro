@@ -11,23 +11,74 @@ export async function getStaticPaths() {
 }
 
 const { post } = Astro.props;
-const { title, category, cover, coverAlt } = post.data;
+const { title, cover, coverAlt, coverCaption, date } = post.data;
 const { Content } = await post.render();
+const isoDate = date.toISOString();
+const displayDate = new Intl.DateTimeFormat('en-US', {
+  month: 'long',
+  day: 'numeric',
+  year: 'numeric',
+}).format(date);
 ---
 <BaseLayout title={title}>
-  <article>
-    <p class="overline">{category}</p>
-    <h1>{title}</h1>
-    <img src={cover} alt={coverAlt ?? title} width="1200" height="675" />
+  <article class="post">
+    <header class="post-header">
+      <h1>{title}</h1>
+      <time datetime={isoDate}>{displayDate}</time>
+    </header>
+    <figure class="post-hero">
+      <img src={cover} alt={coverAlt ?? title} loading="lazy" />
+      <figcaption>
+        <small><i>{coverCaption ?? coverAlt ?? `Cover image for ${title}`}</i></small>
+      </figcaption>
+    </figure>
     <Content />
   </article>
 </BaseLayout>
 
 <style>
-article img {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
+.post {
+  padding: 2em 0 4em;
+}
+
+.post-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4em;
+  margin-bottom: 1.8em;
+}
+
+.post-header time {
+  letter-spacing: 0.14em;
+}
+
+.post-hero {
+  margin: 2em 0 2.5em;
+}
+
+.post-hero figcaption {
+  margin-top: 0.6em;
+}
+
+.post :global(h2) {
+  font-size: 1.5em;
+  margin-top: 2.8em;
   margin-bottom: 1em;
+}
+
+.post :global(h2:first-of-type) {
+  margin-top: 2.2em;
+}
+
+.post :global(p) {
+  margin: 1.3em 0;
+}
+
+.post :global(blockquote) {
+  margin: 2.5em 0;
+}
+
+.post :global(pre) {
+  margin: 2.5em 0;
 }
 </style>

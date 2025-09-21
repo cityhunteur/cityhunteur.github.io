@@ -12,8 +12,6 @@
   },
   "dependencies": {
     "astro": "latest",
-    "@fontsource/ibm-plex-sans": "latest",
-    "@fontsource/ibm-plex-mono": "latest",
     "@fontsource/ia-writer-quattro": "latest"
   },
   "devDependencies": {

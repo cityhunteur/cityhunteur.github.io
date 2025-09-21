@@ -2,7 +2,7 @@
 import BaseLayout from './BaseLayout.astro';
 import type { Props as BaseProps } from './BaseLayout.astro';
 export interface Props extends BaseProps {}
-const { title = 'News', font = 'ibm' } = Astro.props;
+const { title = 'News', font = 'pt' } = Astro.props;
 ---
 <BaseLayout title={title} font={font}>
   <span slot="breadcrumbs">News</span>

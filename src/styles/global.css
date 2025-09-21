@@ -1,16 +1,12 @@
 @import "./tokens.css";
-@import "@fontsource/ibm-plex-sans/400.css";
-@import "@fontsource/ibm-plex-sans/700.css";
-@import "@fontsource/ibm-plex-mono/400.css";
-/* iA Writer Quattro is optional; loaded only when needed via layout */
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap');
 
 :root {
-  --font-sans: 'IBM Plex Sans', sans-serif;
-  --font-mono: 'IBM Plex Mono', monospace;
+  font-family: var(--font-sans);
 }
 
 .font-ia {
-  --font-sans: 'iA Writer Quattro', 'IBM Plex Sans', sans-serif;
+  --font-sans: 'iA Writer Quattro', 'PT Sans', sans-serif;
 }
 
 *,
@@ -22,26 +18,27 @@
 html {
   background: var(--bg);
   color: var(--text);
-  font-family: var(--font-sans);
-  font-size: var(--size-1);
-  line-height: var(--lh-body);
 }
 
 body {
   margin: 0;
-}
-
-img {
-  max-width: 100%;
-  display: block;
+  font-family: var(--font-sans);
+  font-size: var(--size-1);
+  line-height: var(--lh-body);
+  background: var(--bg);
+  color: var(--text);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
 }
 
 a {
-  color: var(--link);
+  color: var(--accent);
   text-decoration: none;
+  transition: color var(--transition) ease, background-color var(--transition) ease, border-color var(--transition) ease;
 }
 
-a:hover {
+a:hover,
+a:focus {
   text-decoration: underline;
 }
 
@@ -50,24 +47,171 @@ a:focus-visible {
   outline-offset: 2px;
 }
 
-h1,
-h2,
-h3 {
-  line-height: var(--lh-tight);
-  font-weight: 700;
-  margin: 0 0 0.3em 0;
+strong {
+  font-weight: 600;
 }
 
-h1 {
-  font-size: var(--size-3);
-}
-
-h2 {
-  font-size: var(--size-3);
+em {
+  font-style: italic;
 }
 
 p {
-  margin: 0 0 1em 0;
+  margin: 1.3em 0;
+  text-align: justify;
+}
+
+ul,
+ol {
+  margin: 1.3em 0 1.3em 1.5em;
+  padding: 0;
+}
+
+li + li {
+  margin-top: 0.4em;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 400;
+  line-height: var(--lh-tight);
+  margin: 0;
+  color: inherit;
+}
+
+h1 {
+  font-size: clamp(2.2rem, 1.6rem + 1vw, 3rem);
+  margin-bottom: 0.3em;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin-top: 2.5em;
+  margin-bottom: 0.8em;
+}
+
+h3 {
+  font-size: 1.2em;
+  margin-top: 2em;
+  margin-bottom: 0.6em;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--border-subtle);
+  margin: 3em 0;
+}
+
+blockquote {
+  margin: 2em 0;
+  padding: 1.2em 1.5em;
+  background: var(--blockquote-bg);
+  border-left: 4px solid var(--blockquote-border);
+  font-style: italic;
+}
+
+blockquote p {
+  margin: 0;
+  text-align: left;
+}
+
+pre {
+  margin: 2em 0;
+  padding: 1.5em;
+  background: var(--code-bg);
+  color: var(--code-text);
+  border-radius: var(--radius-s);
+  overflow-x: auto;
+  font-size: 0.95em;
+}
+
+code {
+  font-family: var(--font-mono);
+  font-size: 0.95em;
+}
+
+pre code {
+  background: none;
+  padding: 0;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--radius-s);
+  margin: 0.5em 0;
+}
+
+figure {
+  margin: 2em auto;
+  text-align: center;
+}
+
+figure img {
+  margin: 0.5em auto;
+}
+
+figcaption,
+small {
+  color: var(--muted);
+  font-size: 0.85em;
+}
+
+.site-header,
+.site-main,
+.site-footer {
+  max-width: var(--column-width);
+  padding: var(--body-pad);
+  margin: 0 auto;
+}
+
+.site-header {
+  padding-top: calc(var(--body-pad) * 1.3);
+  padding-bottom: calc(var(--body-pad) * 1.1);
+  border-bottom: 1px solid var(--border-subtle);
+  display: flex;
+  flex-direction: column;
+  gap: 0.4em;
+}
+
+.site-logo {
+  font-size: 1.1em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: inherit;
+}
+
+.site-breadcrumbs {
+  font-size: 0.82em;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.site-main {
+  padding-top: calc(var(--body-pad) * 1.4);
+  padding-bottom: calc(var(--body-pad) * 1.8);
+}
+
+.site-footer {
+  padding-top: calc(var(--body-pad) * 1.4);
+  padding-bottom: calc(var(--body-pad) * 1.4);
+  border-top: 1px solid var(--border-subtle);
+  color: var(--muted);
+  font-size: 0.85em;
+  text-align: center;
+  margin-top: 4em;
+}
+
+.site-footer p {
+  margin: 0.4em 0;
+  text-align: center;
+}
+
+.post-list {
+  margin: 0;
 }
 
 .overline {
@@ -75,43 +219,88 @@ p {
   letter-spacing: var(--label-tracking);
   text-transform: uppercase;
   color: var(--muted);
-  margin: 0 0 0.4em 0;
+  margin-bottom: 0.5em;
 }
 
-.container {
-  max-width: var(--container-max);
-  padding-inline: var(--container-pad);
-  margin-inline: auto;
+.more {
+  margin: 2em 0 1em;
 }
 
-.post-list {
-  display: grid;
-  row-gap: var(--row-gap);
+.more a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25em;
+  border: 1.5px solid var(--accent);
+  border-radius: 2px;
+  padding: 0.4em 0.8em;
+  color: var(--accent);
+  transition: background-color var(--transition) ease, color var(--transition) ease;
 }
 
-/* Reading list */
+.more a:hover,
+.more a:focus-visible {
+  background: var(--accent);
+  color: #ffffff;
+  text-decoration: none;
+}
+
+time {
+  color: var(--muted);
+  font-size: 0.85em;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2em 0;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 0.6em;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
 .book-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: var(--col-gap);
-  margin-block: var(--row-gap);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.2em;
+  margin: 2em 0;
 }
 
-@media (min-width: 768px) {
-  .book-grid { grid-template-columns: repeat(3, 1fr); }
+.book-link {
+  display: block;
 }
-
-@media (min-width: 1024px) {
-  .book-grid { grid-template-columns: repeat(4, 1fr); }
-}
-
-.book-link { display: block; }
 
 .book-cover {
   width: 100%;
-  height: 100%;
   aspect-ratio: 3 / 4;
   object-fit: cover;
+  border-radius: var(--radius-s);
+}
+
+@media (min-width: 768px) {
+  .site-header {
+    flex-direction: row;
+    align-items: baseline;
+  }
+
+  .site-breadcrumbs {
+    margin-left: auto;
+  }
+
+  .book-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .book-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
 }
 
 /* News sections */
@@ -127,11 +316,11 @@ p {
   display: inline-block;
   padding: 0.75rem 1.5rem;
   border-radius: 9999px;
-  background: var(--section-accent, var(--link));
+  background: var(--section-accent, var(--accent));
   color: var(--text-light);
   font-weight: 700;
   text-decoration: none;
-  transition: filter 0.2s;
+  transition: filter var(--transition) ease;
 }
 
 .cta:hover {
