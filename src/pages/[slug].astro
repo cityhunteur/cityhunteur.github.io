@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
+import { getMetaDescription } from '@/utils/excerpt';
 
 export async function getStaticPaths() {
   const posts = await getCollection('posts');
@@ -11,23 +12,120 @@ export async function getStaticPaths() {
 }
 
 const { post } = Astro.props;
-const { title, category, cover, coverAlt } = post.data;
+const { title, cover, coverAlt, coverCaption, date } = post.data;
 const { Content } = await post.render();
+const isoDate = date.toISOString();
+const displayDate = new Intl.DateTimeFormat('en-US', {
+  month: 'long',
+  day: 'numeric',
+  year: 'numeric',
+}).format(date);
+const description = getMetaDescription(post.body);
+const layoutTitle = `${title} — Pravin Goomannee`;
+const site = Astro.site?.toString() ?? `${Astro.url.protocol}//${Astro.url.host}`;
+const canonicalUrl = Astro.site
+  ? new URL(Astro.url.pathname + Astro.url.search, Astro.site).toString()
+  : Astro.url.href;
+const heroImage = cover ? new URL(cover, site).toString() : undefined;
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: title,
+  description: description || undefined,
+  datePublished: isoDate,
+  dateModified: isoDate,
+  url: canonicalUrl,
+  mainEntityOfPage: canonicalUrl,
+  author: {
+    '@type': 'Person',
+    name: 'Pravin Goomannee',
+  },
+  publisher: {
+    '@type': 'Person',
+    name: 'Pravin Goomannee',
+  },
+} as Record<string, unknown>;
+
+if (heroImage) {
+  structuredData.image = heroImage;
+}
 ---
-<BaseLayout title={title}>
-  <article>
-    <p class="overline">{category}</p>
-    <h1>{title}</h1>
-    <img src={cover} alt={coverAlt ?? title} width="1200" height="675" />
+<BaseLayout
+  title={layoutTitle}
+  description={description}
+  type="article"
+  image={cover}
+  imageAlt={coverAlt ?? title}
+  published={isoDate}
+  updated={isoDate}
+>
+  <script slot="head" type="application/ld+json">
+    {JSON.stringify(structuredData)}
+  </script>
+  <article class="post">
+    <header class="post-header">
+      <h1>{title}</h1>
+      <time datetime={isoDate}>{displayDate}</time>
+    </header>
+    <figure class="post-hero">
+      <img
+        src={cover}
+        alt={coverAlt ?? title}
+        loading="eager"
+        fetchpriority="high"
+        decoding="async"
+      />
+      <figcaption>
+        <small><i>{coverCaption ?? coverAlt ?? `Cover image for ${title}`}</i></small>
+      </figcaption>
+    </figure>
     <Content />
   </article>
 </BaseLayout>
 
 <style>
-article img {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
+.post {
+  padding: 2em 0 4em;
+}
+
+.post-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4em;
+  margin-bottom: 1.8em;
+}
+
+.post-header time {
+  letter-spacing: 0.14em;
+}
+
+.post-hero {
+  margin: 2em 0 2.5em;
+}
+
+.post-hero figcaption {
+  margin-top: 0.6em;
+}
+
+.post :global(h2) {
+  font-size: 1.5em;
+  margin-top: 2.8em;
   margin-bottom: 1em;
+}
+
+.post :global(h2:first-of-type) {
+  margin-top: 2.2em;
+}
+
+.post :global(p) {
+  margin: 1.3em 0;
+}
+
+.post :global(blockquote) {
+  margin: 2.5em 0;
+}
+
+.post :global(pre) {
+  margin: 2.5em 0;
 }
 </style>

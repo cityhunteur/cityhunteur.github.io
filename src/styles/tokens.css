@@ -1,41 +1,42 @@
 :root{
-  /* Container */
-  --container-max: 1200px;
-  --container-pad: clamp(16px, 5vw, 40px);
+  /* Typography */
+  --font-sans: 'PT Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: Menlo, Consolas, 'Liberation Mono', 'Courier New', monospace;
+  --lh-body: 1.6;
+  --lh-tight: 1.25;
+  --size-0: clamp(0.78rem, 0.12vw + 0.74rem, 0.84rem);
+  --size-1: calc(0.8rem + 0.2vw);
 
-  /* Grid & gaps */
-  --row-gap: clamp(28px, 3.2vw, 56px);
-  --col-gap: clamp(20px, 4vw, 56px);
+  /* Layout */
+  --body-pad: 1.5em;
+  --column-width: min(72ch, 100%);
+  --radius-s: 2px;
 
-  /* Typography scale */
-  --size-0: clamp(14px, 0.6vw + 11px, 16px); /* small / overline */
-  --size-1: clamp(16px, 0.9vw + 12px, 18px); /* base */
-  --size-2: clamp(20px, 1.1vw + 14px, 22px); /* subheads */
-  --size-3: clamp(28px, 2.2vw + 14px, 44px); /* H2 titles */
-
-  --lh-tight: 1.2;
-  --lh-body: 1.55;
-
-  /* Colors */
+  /* Color system */
   --bg: #ffffff;
-  --text: #111111;
-  --muted: #666666;
-  --link: #0b66ff;
+  --text: #212228;
+  --muted: #696a6e;
+  --accent: #6688ff; /* #68f */
+  --accent-strong: #4d66ff;
+  --link-color: var(--accent-strong);
+  --border-subtle: rgba(144, 145, 148, 0.14);
+  --blockquote-bg: #f5f6f8;
+  --blockquote-border: #c5c8d4;
+  --code-bg: #1e1f2b;
+  --code-text: #f5f7ff;
+  --transition: 0.2s;
 
-  /* Label */
-  --label-tracking: 0.06em;
-
-  /* News sections */
+  /* Legacy / sections */
+  --container-max: 1100px;
   --section-pad: clamp(4rem, 8vw, 8rem);
-  --section-gap: clamp(1rem, 3vw, 2rem);
-  --h1-size: clamp(2.5rem, 6vw, 3.75rem);
+  --section-gap: clamp(1.25rem, 2vw, 2.5rem);
+  --h1-size: clamp(2.4rem, 5vw, 3.6rem);
   --h2-size: clamp(1.125rem, 1vw + 1rem, 1.375rem);
   --label-size: clamp(0.75rem, 0.2vw + 0.7rem, 0.875rem);
-  --dark-bg: #000000;
-  --light-bg: #f5f5f5;
-  --text-dark: #111111;
+  --label-tracking: 0.12em;
+  --dark-bg: #0f111a;
+  --light-bg: #f5f6f8;
+  --text-dark: #212228;
   --text-light: #ffffff;
-  --accent-purple: #7454f6;
-  --accent-blue: #0094ff;
 }
 
