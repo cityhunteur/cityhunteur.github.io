@@ -2,9 +2,31 @@
 import '../styles/global.css';
 export interface Props {
   title?: string;
+  description?: string;
+  image?: string;
+  imageAlt?: string;
+  type?: 'website' | 'article';
+  published?: string;
+  updated?: string;
   font?: 'pt' | 'ia';
 }
-const { title = "Pravin Goomannee — Blog", font = 'pt' } = Astro.props;
+const {
+  title = 'Pravin Goomannee — Blog',
+  description,
+  image,
+  imageAlt,
+  type = 'website',
+  published,
+  updated,
+  font = 'pt',
+} = Astro.props;
+const defaultDescription =
+  'Essays on building software, leading teams, and the side projects that keep me curious.';
+const metaDescription = description && description.trim().length > 0 ? description.trim() : defaultDescription;
+const url = Astro.url;
+const site = Astro.site?.toString() ?? `${url.protocol}//${url.host}`;
+const canonical = Astro.site ? new URL(url.pathname + url.search, Astro.site).toString() : url.href;
+const resolvedImage = image ? new URL(image, site).toString() : undefined;
 const year = new Date().getFullYear();
 if (font === 'ia') {
   await import('@fontsource/ia-writer-quattro/400.css');
@@ -17,6 +39,8 @@ if (font === 'ia') {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
+    <meta name="description" content={metaDescription} />
+    <link rel="canonical" href={canonical} />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -24,6 +48,22 @@ if (font === 'ia') {
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap"
     />
+    <meta property="og:site_name" content="Pravin Goomannee" />
+    <meta property="og:type" content={type} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={metaDescription} />
+    <meta property="og:url" content={canonical} />
+    {resolvedImage && <meta property="og:image" content={resolvedImage} />}
+    {resolvedImage && imageAlt && <meta property="og:image:alt" content={imageAlt} />}
+    <meta name="twitter:card" content={resolvedImage ? 'summary_large_image' : 'summary'} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={metaDescription} />
+    {resolvedImage && <meta name="twitter:image" content={resolvedImage} />}
+    {resolvedImage && imageAlt && <meta name="twitter:image:alt" content={imageAlt} />}
+    {type === 'article' && published && (
+      <meta property="article:published_time" content={published} />
+    )}
+    {type === 'article' && updated && <meta property="article:modified_time" content={updated} />}
     <slot name="head" />
   </head>
   <body class={font === 'ia' ? 'font-ia' : ''}>

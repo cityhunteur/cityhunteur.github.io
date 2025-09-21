@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
+import { getMetaDescription } from '@/utils/excerpt';
 
 export async function getStaticPaths() {
   const posts = await getCollection('posts');
@@ -19,8 +20,48 @@ const displayDate = new Intl.DateTimeFormat('en-US', {
   day: 'numeric',
   year: 'numeric',
 }).format(date);
+const description = getMetaDescription(post.body);
+const layoutTitle = `${title} — Pravin Goomannee`;
+const site = Astro.site?.toString() ?? `${Astro.url.protocol}//${Astro.url.host}`;
+const canonicalUrl = Astro.site
+  ? new URL(Astro.url.pathname + Astro.url.search, Astro.site).toString()
+  : Astro.url.href;
+const heroImage = cover ? new URL(cover, site).toString() : undefined;
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: title,
+  description: description || undefined,
+  datePublished: isoDate,
+  dateModified: isoDate,
+  url: canonicalUrl,
+  mainEntityOfPage: canonicalUrl,
+  author: {
+    '@type': 'Person',
+    name: 'Pravin Goomannee',
+  },
+  publisher: {
+    '@type': 'Person',
+    name: 'Pravin Goomannee',
+  },
+} as Record<string, unknown>;
+
+if (heroImage) {
+  structuredData.image = heroImage;
+}
 ---
-<BaseLayout title={title}>
+<BaseLayout
+  title={layoutTitle}
+  description={description}
+  type="article"
+  image={cover}
+  imageAlt={coverAlt ?? title}
+  published={isoDate}
+  updated={isoDate}
+>
+  <script slot="head" type="application/ld+json">
+    {JSON.stringify(structuredData)}
+  </script>
   <article class="post">
     <header class="post-header">
       <h1>{title}</h1>

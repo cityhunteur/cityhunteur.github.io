@@ -4,8 +4,10 @@ import PostRow from '../components/PostRow.astro';
 import { getCollection } from 'astro:content';
 
 const posts = (await getCollection('posts')).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+const pageDescription =
+  'Systems, craft, and notes from an engineering journey — essays on building software, leading teams, and curiosity projects.';
 ---
-<BaseLayout title="Pravin Goomannee — Blog">
+<BaseLayout title="Pravin Goomannee — Blog" description={pageDescription}>
   <header class="page-lede">
     <h1>Systems, craft, and notes from an engineering journey.</h1>
     <p>
