@@ -1,6 +1,6 @@
 :root{
   /* Typography */
-  --font-sans: 'PT Sans', sans-serif;
+  --font-sans: 'PT Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --font-mono: Menlo, Consolas, 'Liberation Mono', 'Courier New', monospace;
   --lh-body: 1.6;
   --lh-tight: 1.25;
@@ -15,8 +15,10 @@
   /* Color system */
   --bg: #ffffff;
   --text: #212228;
-  --muted: #909194;
+  --muted: #696a6e;
   --accent: #6688ff; /* #68f */
+  --accent-strong: #4d66ff;
+  --link-color: var(--accent-strong);
   --border-subtle: rgba(144, 145, 148, 0.14);
   --blockquote-bg: #f5f6f8;
   --blockquote-border: #c5c8d4;
