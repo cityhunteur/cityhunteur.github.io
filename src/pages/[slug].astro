@@ -27,7 +27,13 @@ const displayDate = new Intl.DateTimeFormat('en-US', {
       <time datetime={isoDate}>{displayDate}</time>
     </header>
     <figure class="post-hero">
-      <img src={cover} alt={coverAlt ?? title} loading="lazy" />
+      <img
+        src={cover}
+        alt={coverAlt ?? title}
+        loading="eager"
+        fetchpriority="high"
+        decoding="async"
+      />
       <figcaption>
         <small><i>{coverCaption ?? coverAlt ?? `Cover image for ${title}`}</i></small>
       </figcaption>

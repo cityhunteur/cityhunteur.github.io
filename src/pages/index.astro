@@ -13,7 +13,9 @@ const posts = (await getCollection('posts')).sort((a, b) => b.data.date.valueOf(
     </p>
   </header>
   <div class="post-list">
-    {posts.map((post) => <PostRow post={post} />)}
+    {posts.map((post, index) => (
+      <PostRow post={post} featured={index === 0} />
+    ))}
   </div>
 </BaseLayout>
 

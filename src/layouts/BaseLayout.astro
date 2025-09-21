@@ -18,6 +18,12 @@ if (font === 'ia') {
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap"
+    />
     <slot name="head" />
   </head>
   <body class={font === 'ia' ? 'font-ia' : ''}>
